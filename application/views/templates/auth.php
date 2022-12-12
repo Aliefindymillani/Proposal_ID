@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
+    <title><?php echo @$title;?></title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets')?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -76,7 +76,7 @@
                                         </div>
                                         <br>
                                         <div class="text-center">
-                                            <a href="<?= base_url('index.php/admin/home')?>" class="btn btn-info btn-user col-7">
+                                            <a href="<?= base_url('index.php/Dashboard')?>" class="btn btn-info btn-user col-7">
                                                 Sign Up
                                             </a>
                                         </div>
