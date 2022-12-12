@@ -43,7 +43,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url('/dashboard') ?>">
+                <a class="nav-link" href="<?= base_url('index.php/dashboard') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -58,26 +58,26 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/dashboard');?>/tambahuser">
+                <a class="nav-link" href="<?= base_url('index.php/dashboard');?>/tambahuser">
                     <i class="fas fa-cog"></i>
                     <span>Tambah User</span>
                 </a>
                     
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/dashboard');?>/listuser">
+                <a class="nav-link" href="<?= base_url('index.php/dashboard');?>/listuser">
                     <i class="fas fa-cog"></i>
                     <span>List User</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/dashboard');?>/kegiatanmasuk">
+                <a class="nav-link" href="<?= base_url('index.php/dashboard');?>/kegiatanmasuk">
                     <i class="fas fa-cog"></i>
                     <span>Kegiatan Masuk</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/dashboard');?>/kegiatanditerima">
+                <a class="nav-link" href="<?= base_url('index.php/dashboard');?>/kegiatanditerima">
                     <i class="fas fa-cog"></i>
                     <span>Kegiatan Diterima</span>
                 </a>
@@ -93,7 +93,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/signup') ?>">
+                <a class="nav-link" href="<?= base_url('index.php/admin/signup') ?>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Sign Up</span></a>
             </li>

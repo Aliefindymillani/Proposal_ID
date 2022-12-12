@@ -76,7 +76,7 @@
                                         </div>
                                         <br>
                                         <div class="text-center">
-                                            <a href="<?= base_url('dashboard')?>" class="btn btn-info btn-user col-7">
+                                            <a href="<?= base_url('index.php/admin/home')?>" class="btn btn-info btn-user col-7">
                                                 Sign Up
                                             </a>
                                         </div>
