@@ -6,25 +6,25 @@ class Login extends CI_Controller {
 
 	function __construct() {
         parent::__construct();
-        $this->load->library('Templates');
+        $this->load->library('TemplateUser');
         // $this->load->model('M_auth');
     }
 
-    // function index()
-	// {
-	// 	// $this->load->view('v_register');
-    //     $data['title'] = "Login";
-    //     $data['title_page'] = "Login";
-    //     $this->templates->display_login('student/v_login', $data);
-	// 	if($this->session->userdata('is_login') == true) {
-	// 		if ($this->session->userdata('akses')=='admin') {
-	// 			redirect('maurisa-arimbi-putri/19081010192/student');
-	// 		}
-	// 		elseif ($this->session->userdata('akses')=='user') {
-	// 			redirect('data-mahasiswa');
-	// 		}
-	//   	}
-	// }
+    function index()
+	{
+		// $this->load->view('v_register');
+        $data['title'] = "Login";
+        $data['title_page'] = "Login";
+        $this->templateuser->disp_login('login', $data);
+		// if($this->session->userdata('is_login') == true) {
+		// 	if ($this->session->userdata('akses')=='admin') {
+		// 		redirect('admin/home');
+		// 	}
+		// 	elseif ($this->session->userdata('akses')=='user') {
+		// 		redirect('home');
+		// 	}
+	  	// }
+	}
 
 	// function process()
 	// {
@@ -33,14 +33,14 @@ class Login extends CI_Controller {
 	// 	$akses = $this->input->post('akses');
 	// 	if(($this->M_auth->login_user($username,$password,$akses))){
 	// 		if ($this->session->userdata('akses')=='admin') {
-	// 			redirect('/Dashboard');
+	// 			redirect('admin/home');
 	// 		}
 	// 		elseif ($this->session->userdata('akses')=='user') {
-	// 			redirect('/home');
+	// 			redirect('home');
 	// 		}
 	// 	}
 	// 	// else if (($this->M_auth->login_user($username,$password,$akses))){
-	// 	// 	redirect('user');
+	// 	// 	redirect('home');
 	// 	// }
 	// 	else
 	// 	{
