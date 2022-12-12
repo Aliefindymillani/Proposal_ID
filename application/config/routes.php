@@ -54,7 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 // user
 // $route['signup'] = 'signupuser';
-$route['home'] = 'user';
+$route['home'] = 'home';
 // $route['tambah-ajuan'] = 'user/pengajuan';
 // $route['student/update/(:any)'] = 'student/update/$1';
 // $route['user-register'] = 'regisuser';
