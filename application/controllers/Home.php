@@ -1,8 +1,8 @@
 <?php
 
 /**
-* Controller User
-*/
+ * Controller User
+ */
 
 class Home extends CI_Controller {
     function __construct() {
@@ -15,7 +15,21 @@ class Home extends CI_Controller {
     }
 
     //read data
-    function index() {
-        echo "halo";
+    public function index()
+    {
+        $this->load->view('user/dashboard');
+    }
+    public function tambah()
+    {
+        $this->load->view('user/pengajuan');
+    }
+    public function status()
+    {
+        $this->load->view('user/status');
+    }
+
+    public function jadwal()
+    {
+        $this->load->view('user/jadwal');
     }
 }
