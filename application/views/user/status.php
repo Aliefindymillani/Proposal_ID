@@ -43,7 +43,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('/home') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Status Pengajuan</span></a>
+                    <span>Dashboard</span></a>
             </li>
 
             <!-- Divider -->
@@ -55,14 +55,14 @@
             </div>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('/home'); ?>/tambah">
                     <i class="fas fa-cog"></i>
                     <span>Tambah Pengajuan</span>
                 </a>
 
             </li>
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="<?= base_url('/home'); ?>/status">
                     <i class="fas fa-cog"></i>
                     <span>Status Pengajuan</span>
