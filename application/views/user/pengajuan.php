@@ -31,8 +31,7 @@
         <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center"
-                href="<?= base_url('/dashboard') ?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/home') ?>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -44,7 +43,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/user') ?>">
+                <a class="nav-link" href="<?= base_url('/home') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -59,20 +58,20 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url('/user'); ?>/tambah">
+                <a class="nav-link" href="<?= base_url('/home'); ?>/tambah">
                     <i class="fas fa-cog"></i>
                     <span>Tambah Pengajuan</span>
                 </a>
 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/user'); ?>/status">
+                <a class="nav-link" href="<?= base_url('/home'); ?>/status">
                     <i class="fas fa-cog"></i>
                     <span>Status Pengajuan</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/user'); ?>/jadwal">
+                <a class="nav-link" href="<?= base_url('/home'); ?>/jadwal">
                     <i class="fas fa-cog"></i>
                     <span>Jadwal Kegiatan</span>
                 </a>

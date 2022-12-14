@@ -4,7 +4,7 @@
  * Controller User
  */
 
-class User extends CI_Controller
+class Home extends CI_Controller
 {
     function __construct()
     {
