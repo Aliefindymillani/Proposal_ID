@@ -13,9 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets') ?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url('assets') ?>/css/sb-admin-2.min.css" rel="stylesheet">
@@ -31,8 +29,7 @@
         <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center"
-                href="<?= base_url('/dashboard') ?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/dashboard') ?>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -116,13 +113,11 @@
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
 
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <button class="btn btn-danger">Logout</button>
                             </a>
                             <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right"
-                                aria-labelledby="alertsDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header text-center bg-danger">
                                     Yakin ingin keluar?
                                 </h6>
@@ -164,6 +159,8 @@
                                             Facere aut, maxime
                                             repellat vero debitis tempora culpa enim illo nostrum vel cumque alias quasi
                                             recusandae voluptate incidunt? Nulla ab id provident!</p>
+                                        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quasi a alias maxime. Repellat, fugiat? Fugiat,
+                                            reprehenderit autem obcaecati maiores itaque quidem magnam, aperiam ratione iure asperiores placeat accusamus ad.</p>
                                     </div>
                                 </div>
                             </div>
@@ -198,8 +195,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
