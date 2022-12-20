@@ -10,7 +10,7 @@
                     <div class="mb-3 row">
                         <label class="col-2 col-form-label">Name</label>
                         <div class="col-10">
-                            <input type="text" class="form-control" placeholder="Name">
+                            <input type="text" class="form-control form-control-user" placeholder="Name">
                         </div>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                     <div class="mb-3 row">
                         <label class="col-2 col-form-label">Username</label>
                         <div class="col-10">
-                            <input type="text" class="form-control" placeholder="Username">
+                            <input type="text" class="form-control form-control-user" placeholder="Username">
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@
                     <div class="mb-3 row">
                         <label for="staticEmail" class="col-2 col-form-label">Email</label>
                         <div class="col-10">
-                            <input type="text" class="form-control" id="staticEmail" placeholder="Email">
+                            <input type="text" class="form-control form-control-user" id="staticEmail" placeholder="Email">
                         </div>
                     </div>
                 </div>
@@ -34,13 +34,13 @@
                     <div class="mb-3 row">
                         <label class="col-2 col-form-label">Password</label>
                         <div class="col-10">
-                            <input type="text" class="form-control" placeholder="Password">
+                            <input type="text" class="form-control form-control-user" name="password" required="required" placeholder="Password">
                         </div>
                     </div>
                 </div>
                 <br>
                 <div class="text-center">
-                    <a href="<?= base_url('dashboard')?>" class="btn btn-info btn-user col-7">
+                    <a href="<?= base_url('home')?>" class="btn btn-info btn-user col-7">
                         Sign Up
                     </a>
                 </div>

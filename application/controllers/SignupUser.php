@@ -29,9 +29,10 @@ class SignupUser extends CI_Controller {
 
     function process()
 	{
-        $this->form_validation->set_rules('name', 'name','trim|required|min_length[1]|max_length[255]');
+        $this->form_validation->set_rules('email', 'email','trim|required|min_length[1]|max_length[255]');
 		$this->form_validation->set_rules('username', 'username','trim|required|min_length[1]|max_length[255]|is_unique[tb_user.username]');
 		$this->form_validation->set_rules('password', 'password','trim|required|min_length[1]|max_length[255]');
+        $this->form_validation->set_rules('name', 'name','trim|required|min_length[1]|max_length[255]');
         $this->form_validation->set_rules('akses', 'akses','trim|required|min_length[1]|max_length[255]');
 		
 		if ($this->form_validation->run()==true)
@@ -60,7 +61,7 @@ class SignupUser extends CI_Controller {
 				    <button type="button" class="btn-close ml-auto" data-bs-dismiss="alert" aria-label="Close"></button>
 			    </div>
                 ');
-			redirect('register');
+			redirect('sign-up');
 		}
 	}
 }
