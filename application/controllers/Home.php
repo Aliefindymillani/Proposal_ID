@@ -4,8 +4,10 @@
  * Controller User
  */
 
-class Home extends CI_Controller {
-    function __construct() {
+class Home extends CI_Controller
+{
+    function __construct()
+    {
         parent::__construct();
         $this->load->library('TemplateUser');
         // $this->load->model('m_mahasiswa','dbmahasiswa');
