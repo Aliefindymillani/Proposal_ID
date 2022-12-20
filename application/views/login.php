@@ -10,7 +10,7 @@
                     <div class="mb-3 row">
                         <label class="col-2 col-form-label">Username</label>
                         <div class="col-10">
-                            <input type="text" class="form-control" placeholder="Username">
+                            <input type="text" class="form-control form-control-user" placeholder="Username">
                         </div>
                     </div>
                 </div>
@@ -18,7 +18,7 @@
                     <div class="mb-3 row">
                         <label class="col-2 col-form-label">Password</label>
                         <div class="col-10">
-                            <input type="text" class="form-control" placeholder="Password">
+                            <input type="text" class="form-control form-control-user" placeholder="Password">
                         </div>
                     </div>
                 </div>
