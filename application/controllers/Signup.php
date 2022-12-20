@@ -8,7 +8,7 @@ class Signup extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->library('TemplateAdmin');
-        // $this->load->model('M_auth');
+        $this->load->model('M_Auth');
     }
 
     function index()
@@ -17,20 +17,20 @@ class Signup extends CI_Controller {
         $data['title_page'] = "Sign Up Admin";
         $this->templateadmin->disp_signup_admin('signup', $data);
 
-		// if($this->session->userdata('is_login') == true) {
-		// 	if ($this->session->userdata('akses')=='admin') {
-		// 		redirect('admin/home');
-		// 	}
-		// 	elseif ($this->session->userdata('akses')=='user') {
-		// 		redirect('home');
-		// 	}
-	  	// }
+		if($this->session->userdata('is_login') == true) {
+			if ($this->session->userdata('akses')=='admin') {
+				redirect('admin/home');
+			}
+			elseif ($this->session->userdata('akses')=='user') {
+				redirect('home');
+			}
+	  	}
 	}
 
     function process()
 	{
         $this->form_validation->set_rules('email', 'email','trim|required|min_length[1]|max_length[255]');
-		$this->form_validation->set_rules('username', 'username','trim|required|min_length[1]|max_length[255]|is_unique[tb_user.username]');
+		$this->form_validation->set_rules('username', 'username','trim|required|min_length[1]|max_length[255]|is_unique[user.username]');
 		$this->form_validation->set_rules('password', 'password','trim|required|min_length[1]|max_length[255]');
         $this->form_validation->set_rules('name', 'name','trim|required|min_length[1]|max_length[255]');
         $this->form_validation->set_rules('akses', 'akses','trim|required|min_length[1]|max_length[255]');
@@ -42,7 +42,7 @@ class Signup extends CI_Controller {
 			$password = $this->input->post('password');
             $name = $this->input->post('name');
 			$akses = $this->input->post('akses');
-			$this->M_auth->register($email, $username, $password, $name, $akses);
+			$this->M_Auth->signup($email,$username,$password,$name,$akses);
 			// $this->session->set_flashdata('success_register','Proses Pendaftaran User Berhasil');
             // $this->session->set_flashdata('msg','
             //     <div class="alert alert-success fade show position-fixed top-3" role="alert">
@@ -61,7 +61,7 @@ class Signup extends CI_Controller {
 				    <button type="button" class="btn-close ml-auto" data-bs-dismiss="alert" aria-label="Close"></button>
 			    </div>
                 ');
-			redirect('sign-up');
+			redirect('admin/signup');
 		}
 	}
 }
