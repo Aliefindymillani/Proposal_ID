@@ -31,7 +31,7 @@
             </form>
             <hr>
             <div class="text-center">
-                <a class="small" href="admin/signup">Sign Up</a>
+                <a class="small" href="<?= base_url('sign-up')?>">Sign Up</a>
             </div>
         </div>
     </div>
