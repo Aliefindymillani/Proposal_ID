@@ -8,7 +8,7 @@ class TemplateUser
     {
         $this->ci = &get_instance();
     }
-    function disp_register($template = NULL, $data = NULL) {
+    function disp_signup_user($template = NULL, $data = NULL) {
         if ($template != NULL)
             $data['_content'] = $this->ci->load->view($template, $data, TRUE);
         $data['_template'] = $this->ci->load->view('templates/auth', $data);
