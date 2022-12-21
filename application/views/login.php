@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <div class="p-5">
             <div class="text-center mb-2">
-                <h1 class="h4 text-gray-900 mb-2">Log In</h1>
+                <h1 class="h4 text-gray-900 mb-2"><?php echo @$title_page;?></h1>
                 <img class="img" style="width: 500px; height: 150px" src="<?= base_url('assets')?>/img/undraw_posting_photo.svg" alt="">
             </div>
             <form class="user">

@@ -15,5 +15,14 @@ class Login extends CI_Controller {
         $data['title'] = "Login";
         $data['title_page'] = "Login";
         $this->templateuser->disp_login('login', $data);
+
+		if($this->session->userdata('is_login') == true) {
+			if ($this->session->userdata('akses')=='admin') {
+				redirect('admin/home');
+			}
+			elseif ($this->session->userdata('akses')=='user') {
+				redirect('home');
+			}
+	  	}
 	}
 }
