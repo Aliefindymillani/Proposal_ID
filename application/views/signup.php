@@ -2,10 +2,10 @@
     <div class="col-lg-12">
         <div class="p-5">
             <div class="text-center mb-2">
-                <h1 class="h4 text-gray-900 mb-2">Sign Up Admin</h1>
+                <h1 class="h4 text-gray-900 mb-2"><?php echo @$title_page;?></h1>
                 <img class="img" style="width: 500px; height: 150px" src="<?= base_url('assets')?>/img/undraw_posting_photo.svg" alt="">
             </div>
-            <form class="user" action="<?php echo base_url().'signup/process' ?>" method="POST">
+            <form class="admin" action="<?php echo base_url().'admin/signup/process' ?>" method="POST">
                 <div class="form-group">
                     <div class="mb-3 row">
                         <label class="col-2 col-form-label">Name</label>
@@ -50,10 +50,8 @@
                     <button class="btn btn-info btn-user col-7" type="submit" name="submit">Sign Up</button>
                 </div>
             </form>
-            <hr>
-            <div class="text-center">
-                <a class="small" href="<?= base_url('login')?>">Login</a>
-            </div>
+            <br>
+            <p class="small" style="text-align: center">Already have an account?<br><a style="text-decoration: none" href="<?= base_url('login')?>">Login</a></p>
         </div>
     </div>
 </div>

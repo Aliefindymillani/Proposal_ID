@@ -19,7 +19,7 @@ class M_Auth extends CI_Model
 		$this->db->insert('user',$data_user);
 	}
 
-    function login($username,$password,$akses)
+    function login($username, $password, $akses)
 	{
         $query = $this->db->get_where('user',array('username'=>$username));
         if($query->num_rows() > 0)
