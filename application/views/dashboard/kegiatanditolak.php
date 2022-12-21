@@ -9,11 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard User</title>
+    <title>CI 3 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets') ?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url('assets') ?>/css/sb-admin-2.min.css" rel="stylesheet">
@@ -29,11 +31,12 @@
         <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/home') ?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center"
+                href="<?= base_url('/dashboard') ?>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Dashboard <sup>User</sup></div>
+                <div class="sidebar-brand-text mx-3">Dashboard <sup>admnistrator</sup></div>
             </a>
 
             <!-- Divider -->
@@ -41,7 +44,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/home') ?>">
+                <a class="nav-link" href="<?= base_url('/dashboard') ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -56,22 +59,34 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/home'); ?>/tambah">
+                <a class="nav-link" href="<?= base_url('/dashboard'); ?>/tambahuser">
                     <i class="fas fa-cog"></i>
-                    <span>Tambah Pengajuan</span>
+                    <span>Tambah User</span>
                 </a>
 
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="<?= base_url('/home'); ?>/status">
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('/dashboard'); ?>/listuser">
                     <i class="fas fa-cog"></i>
-                    <span>Status Pengajuan</span>
+                    <span>List User</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/home'); ?>/jadwal">
+                <a class="nav-link" href="<?= base_url('/dashboard'); ?>/kegiatanmasuk">
                     <i class="fas fa-cog"></i>
-                    <span>Jadwal Kegiatan</span>
+                    <span>Kegiatan Masuk</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('/dashboard'); ?>/kegiatanditerima">
+                    <i class="fas fa-cog"></i>
+                    <span>Kegiatan Diterima</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="<?= base_url('/dashboard'); ?>/kegiatanditolak">
+                    <i class="fas fa-cog"></i>
+                    <span>Kegiatan Ditolak</span>
                 </a>
             </li>
 
@@ -85,10 +100,14 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('/admin/signup') ?>">
+                <a class="nav-link" href="<?= base_url('/') ?>">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Sign Up</span></a>
             </li>
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -113,11 +132,13 @@
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
 
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <button class="btn btn-danger">Logout</button>
                             </a>
                             <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right"
+                                aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header text-center bg-danger">
                                     Yakin ingin keluar?
                                 </h6>
@@ -135,7 +156,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Status Pengajuan</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Kegiatan Diterima</h1>
                     </div>
 
                     <!-- Content Row -->
@@ -155,8 +176,6 @@
                                                     <th class="text-center">No.</th>
                                                     <th class="text-center">Nama Kegiatan</th>
                                                     <th class="text-center">Ketua Pelaksana</th>
-                                                    <th class="text-center">Tanggal Kegiatan</th>
-                                                    <th class="text-center">Status</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -164,36 +183,26 @@
                                                     <td class="text-center">1</td>
                                                     <td class="text-center">Nama Kegiatan</td>
                                                     <td class="text-center">Nama Ketua</td>
-                                                    <td class="text-center">09-10-2022</td>
-                                                    <td class="text-center">Diterima</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-center">2</td>
                                                     <td class="text-center">Nama Kegiatan</td>
                                                     <td class="text-center">Nama Ketua</td>
-                                                    <td class="text-center">09-10-2022</td>
-                                                    <td class="text-center">Diterima</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-center">3</td>
                                                     <td class="text-center">Nama Kegiatan</td>
                                                     <td class="text-center">Nama Ketua</td>
-                                                    <td class="text-center">09-10-2022</td>
-                                                    <td class="text-center">Diterima</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-center">4</td>
                                                     <td class="text-center">Nama Kegiatan</td>
                                                     <td class="text-center">Nama Ketua</td>
-                                                    <td class="text-center">09-10-2022</td>
-                                                    <td class="text-center">Diterima</td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-center">5</td>
                                                     <td class="text-center">Nama Kegiatan</td>
                                                     <td class="text-center">Nama Ketua</td>
-                                                    <td class="text-center">09-10-2022</td>
-                                                    <td class="text-center">Diterima</td>
                                                 </tr>
 
                                             </tbody>
@@ -232,7 +241,8 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">

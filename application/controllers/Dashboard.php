@@ -30,4 +30,9 @@ class Dashboard extends CI_Controller {
 	{
 		$this->load->view('dashboard/kegiatanditerima');
 	}
+
+	public function kegiatanditolak()
+	{
+		$this->load->view('dashboard/kegiatanditolak');
+	}
 }

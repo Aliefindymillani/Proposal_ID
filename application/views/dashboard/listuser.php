@@ -80,6 +80,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('/dashboard'); ?>/kegiatanditerima">
                     <i class="fas fa-cog"></i>
+                    <span>Kegiatan Diterima</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('/dashboard'); ?>/kegiatanditolak">
+                    <i class="fas fa-cog"></i>
                     <span>Kegiatan Ditolak</span>
                 </a>
             </li>
