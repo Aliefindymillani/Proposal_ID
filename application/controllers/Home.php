@@ -19,15 +19,15 @@ class Home extends CI_Controller
     }
     public function tambah()
     {
-        $this->load->view('user/pengajuan');
+        $this->templateuser->disp_pengajuan('user/pengajuan');
     }
     public function status()
     {
-        $this->load->view('user/status');
+        $this->templateuser->disp_status('user/status');
     }
 
     public function jadwal()
     {
-        $this->load->view('user/jadwal');
+        $this->templateuser->disp_jadwal('user/jadwal');
     }
 }

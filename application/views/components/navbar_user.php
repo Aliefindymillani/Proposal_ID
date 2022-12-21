@@ -20,7 +20,7 @@
                                     Yakin ingin keluar?
                                 </h6>
 
-                                <a class="dropdown-item text-center small text-danger" href="#">Keluar</a>
+                                <a class="dropdown-item text-center small text-danger" href="<?php echo base_url().'logout' ?>">Keluar</a>
                             </div>
                         </li>
                     </ul>
