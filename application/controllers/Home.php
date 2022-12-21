@@ -10,28 +10,24 @@ class Home extends CI_Controller
     {
         parent::__construct();
         $this->load->library('TemplateUser');
-        // $this->load->model('m_mahasiswa','dbmahasiswa');
-        // if(!$this->session->userdata('username')){
-        //     redirect('login');
-        // }
     }
 
     //read data
     public function index()
     {
-        $this->load->view('user/dashboard');
+        $this->templateuser->disp_dashboard('user/dashboard');
     }
     public function tambah()
     {
-        $this->load->view('user/pengajuan');
+        $this->templateuser->disp_pengajuan('user/pengajuan');
     }
     public function status()
     {
-        $this->load->view('user/status');
+        $this->templateuser->disp_status('user/status');
     }
 
     public function jadwal()
     {
-        $this->load->view('user/jadwal');
+        $this->templateuser->disp_jadwal('user/jadwal');
     }
 }

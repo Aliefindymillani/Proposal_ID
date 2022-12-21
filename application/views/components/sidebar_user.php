@@ -1,10 +1,10 @@
 <ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/home') ?>">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/dashboard') ?>">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Dashboard <sup>admnistrator</sup></div>
+        <div class="sidebar-brand-text mx-3">Dashboard <sup>User</sup></div>
     </a>
 
     <!-- Divider -->
@@ -27,28 +27,22 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/home');?>/tambahuser">
+        <a class="nav-link" href="<?= base_url('/home'); ?>/tambah">
             <i class="fas fa-cog"></i>
-            <span>Tambah User</span>
+            <span>Tambah Pengajuan</span>
         </a>
-                
+
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/home');?>/listuser">
+        <a class="nav-link" href="<?= base_url('/home'); ?>/status">
             <i class="fas fa-cog"></i>
-            <span>List User</span>
-        </a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/home');?>/kegiatanmasuk">
-            <i class="fas fa-cog"></i>
-            <span>Kegiatan Masuk</span>
+            <span>Status Pengajuan</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/home');?>/kegiatanditerima">
+        <a class="nav-link" href="<?= base_url('/home'); ?>/jadwal">
             <i class="fas fa-cog"></i>
-            <span>Kegiatan Diterima</span>
+            <span>Jadwal Kegiatan</span>
         </a>
     </li>
 
@@ -62,7 +56,7 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/signup') ?>">
+        <a class="nav-link" href="<?= base_url('/admin/signup') ?>">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Sign Up</span></a>
     </li>

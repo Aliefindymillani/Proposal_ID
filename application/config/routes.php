@@ -64,3 +64,6 @@ $route['sign-up/process'] = 'signupuser/process';
 $route['admin/signup'] = 'signup';
 $route['admin/home'] = 'Dashboard';
 $route['admin/signup/process'] = 'signup/process';
+
+//auth
+$route['logout'] = 'login/logout';
