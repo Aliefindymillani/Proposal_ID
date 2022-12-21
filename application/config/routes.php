@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 // user
 $route['home'] = 'home';
 $route['sign-up'] = 'signupuser';
+$route['sign-up/process'] = 'signupuser/process';
 // $route['tambah-ajuan'] = 'user/pengajuan';
 // $route['student/update/(:any)'] = 'student/update/$1';
 // $route['user-register'] = 'regisuser';

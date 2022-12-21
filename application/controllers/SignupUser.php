@@ -21,7 +21,7 @@ class SignupUser extends CI_Controller {
     function process()
 	{
         $this->form_validation->set_rules('email', 'email','trim|required|min_length[1]|max_length[255]');
-		$this->form_validation->set_rules('username', 'username','trim|required|min_length[1]|max_length[255]|is_unique[tb_user.username]');
+		$this->form_validation->set_rules('username', 'username','trim|required|min_length[1]|max_length[255]|is_unique[user.username]');
 		$this->form_validation->set_rules('password', 'password','trim|required|min_length[1]|max_length[255]');
         $this->form_validation->set_rules('name', 'name','trim|required|min_length[1]|max_length[255]');
         $this->form_validation->set_rules('akses', 'akses','trim|required|min_length[1]|max_length[255]');
