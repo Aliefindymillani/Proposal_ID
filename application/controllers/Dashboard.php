@@ -4,35 +4,34 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Dashboard extends CI_Controller {
 	function __construct() {
         parent::__construct();
-        // $this->load->library('Templates');
-        // $this->load->model('M_auth');
+        $this->load->library('TemplateAdmin');
     }
 
 	public function index()
 	{
-		$this->load->view('dashboard/index');
+		$this->templateadmin->disp_dashboard('dashboard/index');
 	}
 	public function tambahuser()
 	{
-		$this->load->view('dashboard/tambahuser');
+		$this->templateadmin->disp_tambah_user('dashboard/tambahuser');
 	}
 	public function listuser()
 	{
-		$this->load->view('dashboard/listuser');
+		$this->templateadmin->disp_list_user('dashboard/listuser');
 	}
 
 	public function kegiatanmasuk()
 	{
-		$this->load->view('dashboard/kegiatanmasuk');
+		$this->templateadmin->disp_kegiatan_masuk('dashboard/kegiatanmasuk');
 	}
 
 	public function kegiatanditerima()
 	{
-		$this->load->view('dashboard/kegiatanditerima');
+		$this->templateadmin->disp_kegiatan_diterima('dashboard/kegiatanditerima');
 	}
 
 	public function kegiatanditolak()
 	{
-		$this->load->view('dashboard/kegiatanditolak');
+		$this->templateadmin->disp_kegiatan_ditolak('dashboard/kegiatanditolak');
 	}
 }

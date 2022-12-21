@@ -10,16 +10,12 @@ class Home extends CI_Controller
     {
         parent::__construct();
         $this->load->library('TemplateUser');
-        // $this->load->model('m_mahasiswa','dbmahasiswa');
-        // if(!$this->session->userdata('username')){
-        //     redirect('login');
-        // }
     }
 
     //read data
     public function index()
     {
-        $this->load->view('user/dashboard');
+        $this->templateuser->disp_dashboard('user/dashboard');
     }
     public function tambah()
     {

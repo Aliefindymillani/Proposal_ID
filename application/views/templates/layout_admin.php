@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dashboard User</title>
+    <title>CI 3 - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url('assets') ?>/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -27,7 +27,6 @@
 
         <!-- Sidebar -->
         <?php echo $_sidebar; ?>
-        
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -38,13 +37,11 @@
 
                 <!-- Topbar -->
                 <?php echo $_header; ?>
-                
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <!-- Content -->
                 <?php echo $_content; ?>
-                
                 <!-- /.container-fluid -->
 
             </div>

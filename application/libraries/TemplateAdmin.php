@@ -20,12 +20,57 @@ class TemplateAdmin
         $data['_template'] = $this->ci->load->view('templates/auth', $data);
     }
 
-    function display($template = NULL, $data = NULL)
+    function disp_dashboard($template = NULL, $data = NULL)
     {
         if ($template != NULL)
             $data['_content'] = $this->ci->load->view($template, $data, TRUE);
-        $data['_header'] = $this->ci->load->view('templates/header', $data, TRUE);
-        $data['_sidebar'] = $this->ci->load->view('templates/sidebar', $data, TRUE);
-        $data['_template'] = $this->ci->load->view('templates/layout', $data);
+        $data['_header'] = $this->ci->load->view('components/navbar_admin', $data, TRUE);
+        $data['_sidebar'] = $this->ci->load->view('components/sidebar_admin', $data, TRUE);
+        $data['_template'] = $this->ci->load->view('templates/layout_admin', $data);
+    }
+
+    function disp_kegiatan_diterima($template = NULL, $data = NULL)
+    {
+        if ($template != NULL)
+            $data['_content'] = $this->ci->load->view($template, $data, TRUE);
+        $data['_header'] = $this->ci->load->view('components/navbar_admin', $data, TRUE);
+        $data['_sidebar'] = $this->ci->load->view('components/sidebar_admin', $data, TRUE);
+        $data['_template'] = $this->ci->load->view('templates/layout_admin', $data);
+    }
+
+    function disp_kegiatan_ditolak($template = NULL, $data = NULL)
+    {
+        if ($template != NULL)
+            $data['_content'] = $this->ci->load->view($template, $data, TRUE);
+        $data['_header'] = $this->ci->load->view('components/navbar_admin', $data, TRUE);
+        $data['_sidebar'] = $this->ci->load->view('components/sidebar_admin', $data, TRUE);
+        $data['_template'] = $this->ci->load->view('templates/layout_admin', $data);
+    }
+
+    function disp_kegiatan_masuk($template = NULL, $data = NULL)
+    {
+        if ($template != NULL)
+            $data['_content'] = $this->ci->load->view($template, $data, TRUE);
+        $data['_header'] = $this->ci->load->view('components/navbar_admin', $data, TRUE);
+        $data['_sidebar'] = $this->ci->load->view('components/sidebar_admin', $data, TRUE);
+        $data['_template'] = $this->ci->load->view('templates/layout_admin', $data);
+    }
+
+    function disp_list_user($template = NULL, $data = NULL)
+    {
+        if ($template != NULL)
+            $data['_content'] = $this->ci->load->view($template, $data, TRUE);
+        $data['_header'] = $this->ci->load->view('components/navbar_admin', $data, TRUE);
+        $data['_sidebar'] = $this->ci->load->view('components/sidebar_admin', $data, TRUE);
+        $data['_template'] = $this->ci->load->view('templates/layout_admin', $data);
+    }
+
+    function disp_tambah_user($template = NULL, $data = NULL)
+    {
+        if ($template != NULL)
+            $data['_content'] = $this->ci->load->view($template, $data, TRUE);
+        $data['_header'] = $this->ci->load->view('components/navbar_admin', $data, TRUE);
+        $data['_sidebar'] = $this->ci->load->view('components/sidebar_admin', $data, TRUE);
+        $data['_template'] = $this->ci->load->view('templates/layout_admin', $data);
     }
 }
