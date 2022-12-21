@@ -40,9 +40,7 @@
                 </div>
                 <br>
                 <div class="text-center">
-                    <a href="<?= base_url('home')?>" class="btn btn-info btn-user col-7">
-                        Sign Up
-                    </a>
+                    <button class="btn btn-info btn-user col-7" type="submit" name="submit">Sign Up</button>
                 </div>
             </form>
             <hr>
