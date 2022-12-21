@@ -50,10 +50,8 @@
                     <button class="btn btn-info btn-user col-7" type="submit" name="submit">Sign Up</button>
                 </div>
             </form>
-            <hr>
-            <div class="text-center">
-                <a class="small" href="<?= base_url('login')?>">Login</a>
-            </div>
+            <br>
+            <p class="small" style="text-align: center">Already have an account?<br><a style="text-decoration: none" href="<?= base_url('login')?>">Login</a></p>
         </div>
     </div>
 </div>
