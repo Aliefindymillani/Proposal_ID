@@ -1,0 +1,12 @@
+body {
+    font-family: "Poppins";
+}
+
+.sidebar {
+    background-color: #AAD4D0;
+    /* font-family: "Poppins"; */
+}
+
+.sidebar a, i, .sidebar-heading, .sidebar-divider {
+    color: #353535 !important;
+}

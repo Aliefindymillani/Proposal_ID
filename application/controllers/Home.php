@@ -10,6 +10,9 @@ class Home extends CI_Controller
     {
         parent::__construct();
         $this->load->library('TemplateUser');
+        if(!$this->session->userdata('username')){
+            redirect('login');
+        }
     }
 
     //read data
@@ -17,6 +20,11 @@ class Home extends CI_Controller
     {
         $data['title'] = "Home";
         $this->templateuser->disp_dashboard('user/dashboard', $data);
+        if($this->session->userdata('is_login') == true) {
+			if ($this->session->userdata('akses')=='admin') {
+				redirect('home');
+			}
+        }
     }
     public function tambah()
     {
