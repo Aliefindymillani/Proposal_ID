@@ -5,12 +5,20 @@ class Dashboard extends CI_Controller {
 	function __construct() {
         parent::__construct();
         $this->load->library('TemplateAdmin');
+		if(!$this->session->userdata('username')){
+            redirect('login');
+        }
     }
 
 	public function index()
 	{
 		$data['title'] = "Home";
 		$this->templateadmin->disp_dashboard('dashboard/index', $data);
+		if($this->session->userdata('is_login') == true) {
+			if ($this->session->userdata('akses')=='user') {
+				redirect('admin/home');
+			}
+	  	}
 	}
 	public function tambahuser()
 	{

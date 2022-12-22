@@ -62,8 +62,13 @@ $route['sign-up/process'] = 'signupuser/process';
 
 //admin
 $route['admin/signup'] = 'signup';
-$route['admin/home'] = 'Dashboard';
 $route['admin/signup/process'] = 'signup/process';
+$route['admin/home'] = 'Dashboard';
+$route['admin/kegiatan-diterima'] = 'Dashboard/kegiatanditerima';
+$route['admin/kegiatan-ditolak'] = 'Dashboard/kegiatanditolak';
+$route['admin/kegiatan-masuk'] = 'Dashboard/kegiatanmasuk';
+$route['admin/list-user'] = 'Dashboard/listuser';
+$route['admin/tambah-user'] = 'Dashboard/tambahuser';
 
 //auth
 $route['logout'] = 'login/logout';
