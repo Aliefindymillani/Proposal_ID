@@ -7,18 +7,30 @@
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
 
-        <!-- Nav Item - Alerts -->
-        <li class="nav-item dropdown no-arrow mx-1">
+        <!-- Modal Logout -->
+        <li>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                Logout
+            </button>
 
-            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <button class="btn btn-danger">Logout</button>
-            </a>
-            <!-- Dropdown - Alerts -->
-            <div class="dropdown-list dropdown-menu dropdown-menu-right" aria-labelledby="alertsDropdown">
-                <h6 class="dropdown-header text-center bg-danger">
-                    Yakin ingin keluar?
-                </h6>
-                <a class="dropdown-item text-center small text-danger" href="<?php echo base_url().'logout' ?>">Keluar</a>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Log Out</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Apakah anda akan log out?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a class="btn btn-danger" href="<?php echo base_url().'logout' ?>">Yes</a>
+                    </div>
+                    </div>
+                </div>
             </div>
         </li>
     </ul>
