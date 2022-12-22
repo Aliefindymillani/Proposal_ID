@@ -15,19 +15,23 @@ class Home extends CI_Controller
     //read data
     public function index()
     {
-        $this->templateuser->disp_dashboard('user/dashboard');
+        $data['title'] = "Home";
+        $this->templateuser->disp_dashboard('user/dashboard', $data);
     }
     public function tambah()
     {
-        $this->templateuser->disp_pengajuan('user/pengajuan');
+        $data['title'] = "Pengajuan";
+        $this->templateuser->disp_pengajuan('user/pengajuan', $data);
     }
     public function status()
     {
-        $this->templateuser->disp_status('user/status');
+        $data['title'] = "Status";
+        $this->templateuser->disp_status('user/status', $data);
     }
 
     public function jadwal()
     {
-        $this->templateuser->disp_jadwal('user/jadwal');
+        $data['title'] = "Jadwal Kegiatan";
+        $this->templateuser->disp_jadwal('user/jadwal', $data);
     }
 }
