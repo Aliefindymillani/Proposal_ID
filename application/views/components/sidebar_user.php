@@ -2,9 +2,9 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/dashboard') ?>">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+            <img class="img" style="width: 50px; height: 50px" src="<?= base_url('assets') ?>/img/logo.png" alt="">
         </div>
-        <div class="sidebar-brand-text mx-3">Dashboard <sup>User</sup></div>
+        <div class="sidebar-brand-text mx-3">Sispro <br> <sup>User</sup></div>
     </a>
 
     <!-- Divider -->
