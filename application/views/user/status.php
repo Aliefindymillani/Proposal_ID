@@ -11,17 +11,18 @@
         <div class="col-xl-12 col-md-6">
             <div class="card">
                 <div class="card-header bg-info">
-                    
+
                 </div>
 
                 <div class="card-body">
                     <!-- (A) SEARCH FORM -->
                     <div class="col justify-content-end d-flex mb-2">
-                        <form class="form-inline" role="form" action="<?php echo base_url().'home/status-proposal';?>" method="post">
+                        <form class="form-inline" role="form"
+                            action="<?php echo base_url() . 'home/status-proposal'; ?>" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="search" placeholder="Search...">
                             </div>
-                            <button type="submit" class="btn btn-info" name="submit" >Search</button>
+                            <button type="submit" class="btn btn-info" name="submit">Search</button>
                         </form>
                     </div>
                     <div class="table-responsive">
@@ -31,7 +32,7 @@
                                     <th class="text-center">No.</th>
                                     <th class="text-center">Nama Kegiatan</th>
                                     <th class="text-center">Ketua Pelaksana</th>
-                                    <th class="text-center">Pengajuan</th>
+                                    <th class="text-center">Tanggal Pengajuan</th>
                                     <th class="text-center">Deskripsi</th>
                                     <th class="text-center" colspan="2">Mulai - Selesai</th>
                                     <th class="text-center">Status</th>
@@ -39,31 +40,33 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                
-                                <?php 
+
+                                <?php
                                 $no = 1;
-                                foreach ($data_proposal as $row) : 
-                                
+                                foreach ($data_proposal as $row) :
+
                                 ?>
-                                    <tr>
-                                        <td>
-                                            <?= $no++; ?>
-                                        </td>
-                                        <td><?= $row->nama_kegiatan ?></td>
-                                        <td><?= $row->ketua_pelaksana ?></td>
-                                        <td><?= $row->tgl_pengajuan ?></td>
-                                        <td><?= $row->deskripsi ?></td>
-                                        <td><?= $row->tgl_mulai ?></td>
-                                        <td><?= $row->tgl_selesai ?></td>
-                                        <td><?= $row->status ?></td>
-                                        <td><a  onClick="return confirm('Lihat Proposal?')" href="<?= base_url(); ?>./assets/uploads/<?= $row->berkas_file; ?>" type="button" class="btn btn-info" target="_blank">Lihat Pdf</a></td>
-                                        
-                                <?php endforeach; ?>
+                                <tr>
+                                    <td>
+                                        <?= $no++; ?>
+                                    </td>
+                                    <td><?= $row->nama_kegiatan ?></td>
+                                    <td><?= $row->ketua_pelaksana ?></td>
+                                    <td><?= $row->tgl_pengajuan ?></td>
+                                    <td><?= $row->deskripsi ?></td>
+                                    <td><?= $row->tgl_mulai ?></td>
+                                    <td><?= $row->tgl_selesai ?></td>
+                                    <td><?= $row->status ?></td>
+                                    <td><a onClick="return confirm('Lihat Proposal?')"
+                                            href="<?= base_url(); ?>./assets/uploads/<?= $row->berkas_file; ?>"
+                                            type="button" class="btn btn-info" target="_blank">Lihat Pdf</a></td>
+
+                                    <?php endforeach; ?>
 
                             </tbody>
                         </table>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
