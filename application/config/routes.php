@@ -56,6 +56,11 @@ $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'home';
 $route['sign-up'] = 'signupuser';
 $route['sign-up/process'] = 'signupuser/process';
+$route['home/form-proposal'] = 'home/tambah';
+$route['home/proses-proposal'] = 'home/prosesuploadform';
+
+$route['home/status-proposal'] = 'home/status';
+$route['home/jadwal-proposal'] = 'home/jadwal';
 // $route['tambah-ajuan'] = 'user/pengajuan';
 // $route['student/update/(:any)'] = 'student/update/$1';
 // $route['user-register'] = 'regisuser';
@@ -69,6 +74,11 @@ $route['admin/kegiatan-ditolak'] = 'Dashboard/kegiatanditolak';
 $route['admin/kegiatan-masuk'] = 'Dashboard/kegiatanmasuk';
 $route['admin/list-user'] = 'Dashboard/listuser';
 $route['admin/tambah-user'] = 'Dashboard/tambahuser';
+$route['admin/form-proposal'] = 'Dashboard/formproposal';
+$route['admin/proses-proposal'] = 'Dashboard/prosesuploadform';
+$route['admin/tolak-status/(:num)'] = 'Dashboard/tolakstatus/$1';
+$route['admin/terima-status/(:num)'] = 'Dashboard/terimastatus/$1';
+$route['admin/search_keyword'] = 'Dashboard/search_keyword';
 
 //auth
 $route['logout'] = 'login/logout';

@@ -32,7 +32,7 @@
                         <div class="col-lg-12">
                             
                             <div class="p-2">
-                            <form class="admin" method="POST" action="<?= base_url('home/proses-proposal') ?>" enctype="multipart/form-data">
+                            <form class="admin" method="POST" action="<?= base_url('admin/proses-proposal') ?>" enctype="multipart/form-data">
                                     <div class="form-group">
                                         <div class="mb-3 row">
                                             <label for="staticEmail" class="col-2 col-form-label">Nama

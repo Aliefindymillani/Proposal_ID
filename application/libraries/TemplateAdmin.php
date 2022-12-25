@@ -73,4 +73,12 @@ class TemplateAdmin
         $data['_sidebar'] = $this->ci->load->view('components/sidebar_admin', $data, TRUE);
         $data['_template'] = $this->ci->load->view('templates/layout_admin', $data);
     }
+    function disp_form_proposal($template = NULL, $data = NULL)
+    {
+        if ($template != NULL)
+            $data['_content'] = $this->ci->load->view($template, $data, TRUE);
+            $data['_header'] = $this->ci->load->view('components/navbar_admin', $data, TRUE);
+            $data['_sidebar'] = $this->ci->load->view('components/sidebar_admin', $data, TRUE);
+            $data['_template'] = $this->ci->load->view('templates/layout_admin', $data);
+    }
 }

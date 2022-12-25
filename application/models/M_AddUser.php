@@ -6,6 +6,7 @@ class M_AddUser extends CI_Model
 	{
         parent::__construct();
 	}
+	private $table = 'user';
  
 	function adduser($email, $username, $password, $name, $akses)
 	{
@@ -18,6 +19,17 @@ class M_AddUser extends CI_Model
 		);
 		$this->db->insert('user',$data_user);
 	}
+
+	
+	public function getAll()
+    {
+        $this->db->from($this->table);
+        $this->db->order_by("akses", "asc");
+        $query = $this->db->get();
+        return $query->result();
+        //fungsi diatas seperti halnya query 
+        //select * from mahasiswa order by IdMhsw desc
+    }
 
 }
 ?>

@@ -27,20 +27,20 @@
 
     <!-- Nav Item - Charts -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/home'); ?>/tambah">
+        <a class="nav-link" href="<?= base_url('home/form-proposal'); ?>">
             <i class="fas fa-cog"></i>
             <span>Tambah Pengajuan</span>
         </a>
 
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/home'); ?>/status">
+        <a class="nav-link" href="<?= base_url('home/status-proposal'); ?>">
             <i class="fas fa-cog"></i>
             <span>Status Pengajuan</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/home'); ?>/jadwal">
+        <a class="nav-link" href="<?= base_url('home/jadwal-proposal'); ?>">
             <i class="fas fa-cog"></i>
             <span>Jadwal Kegiatan</span>
         </a>

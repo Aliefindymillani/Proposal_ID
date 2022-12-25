@@ -21,34 +21,33 @@
                                     <th class="text-center">No.</th>
                                     <th class="text-center">Nama Kegiatan</th>
                                     <th class="text-center">Ketua Pelaksana</th>
+                                    <th class="text-center">Pengajuan</th>
+                                    <th class="text-center">Deskripsi</th>
+                                    <th class="text-center" colspan="2">Mulai - Selesai</th>
+                                    <th class="text-center">Status</th>
+                                    <th class="text-center" colspan="3">Opsi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">Nama Kegiatan</td>
-                                    <td class="text-center">Nama Ketua</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">Nama Kegiatan</td>
-                                    <td class="text-center">Nama Ketua</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center">Nama Kegiatan</td>
-                                    <td class="text-center">Nama Ketua</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">4</td>
-                                    <td class="text-center">Nama Kegiatan</td>
-                                    <td class="text-center">Nama Ketua</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">5</td>
-                                    <td class="text-center">Nama Kegiatan</td>
-                                    <td class="text-center">Nama Ketua</td>
-                                </tr>
+                                <?php 
+                                $no = 1;
+                                foreach ($data_proposal as $row) : 
+                                
+                                ?>
+                                    <tr>
+                                        <td>
+                                            <?= $no++; ?>
+                                        </td>
+                                        <td><?= $row->nama_kegiatan ?></td>
+                                        <td><?= $row->ketua_pelaksana ?></td>
+                                        <td><?= $row->tgl_pengajuan ?></td>
+                                        <td><?= $row->deskripsi ?></td>
+                                        <td><?= $row->tgl_mulai ?></td>
+                                        <td><?= $row->tgl_selesai ?></td>
+                                        <td><?= $row->status ?></td>
+                                        <td><a  onClick="return confirm('Lihat Proposal?')" href="<?= base_url(); ?>./assets/uploads/<?= $row->berkas_file; ?>" type="button" class="btn btn-info" target="_blank">Lihat</a></td>
+                                    </tr>
+                                <?php endforeach; ?>
 
                             </tbody>
                         </table>

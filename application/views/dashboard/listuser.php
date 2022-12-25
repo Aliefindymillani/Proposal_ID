@@ -22,55 +22,25 @@
                                     <th class="text-center">Nama</th>
                                     <th class="text-center">Username</th>
                                     <th class="text-center">Email</th>
-                                    <th class="text-center">Aksi</th>
+                                    <th class="text-center">Akses User</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td class="text-center">1</td>
-                                    <td class="text-center">Siti Badriah</td>
-                                    <td class="text-center">sitibd</td>
-                                    <td class="text-center">siti@gmail.com</td>
-                                    <td class="text-center">
-                                        <a href="#hapus" type="button" class="btn btn-danger">Hapus</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">2</td>
-                                    <td class="text-center">Siti Badriah</td>
-                                    <td class="text-center">sitibd</td>
-                                    <td class="text-center">siti@gmail.com</td>
-                                    <td class="text-center">
-                                        <a href="#hapus" type="button" class="btn btn-danger">Hapus</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">3</td>
-                                    <td class="text-center">Siti Badriah</td>
-                                    <td class="text-center">sitibd</td>
-                                    <td class="text-center">siti@gmail.com</td>
-                                    <td class="text-center">
-                                        <a href="#hapus" type="button" class="btn btn-danger">Hapus</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">4</td>
-                                    <td class="text-center">Siti Badriah</td>
-                                    <td class="text-center">sitibd</td>
-                                    <td class="text-center">siti@gmail.com</td>
-                                    <td class="text-center">
-                                        <a href="#hapus" type="button" class="btn btn-danger">Hapus</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="text-center">5</td>
-                                    <td class="text-center">Siti Badriah</td>
-                                    <td class="text-center">sitibd</td>
-                                    <td class="text-center">siti@gmail.com</td>
-                                    <td class="text-center">
-                                        <a href="#hapus" type="button" class="btn btn-danger">Hapus</a>
-                                    </td>
-                                </tr>
+                                <?php 
+                                $no = 1;
+                                foreach ($data_user as $row) : 
+                                
+                                ?>
+                                    <tr>
+                                        <td class="text-center">
+                                            <?= $no++; ?>
+                                        </td>
+                                        <td class="text-center"><?= $row->name ?></td>
+                                        <td class="text-center"><?= $row->username ?></td>
+                                        <td class="text-center"><?= $row->email ?></td>
+                                        <td class="text-center"><?= $row->akses ?></td>
+                                        
+                                <?php endforeach; ?>
 
                             </tbody>
                         </table>
