@@ -1,0 +1,85 @@
+body {
+    background-color: #c7c6bf;
+    height: 100%;
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", Arial;
+    font-size : 28px;
+    color: black;
+    align-items: center;
+    padding-left: 5%;
+    padding-bottom: 5px;
+}
+
+form {
+    font-family: "Poppins", Arial;
+    font-size: 18px;
+    align-items: left;
+    justify-content: space-between;
+    width: 100%;
+    padding : 0px 45px 45px 5%;
+}
+
+table tr, td {
+    font-family: "Poppins", Arial;
+    font-size: 18px;
+    padding: 5px 5px 5px 0px;
+    vertical-align: text-top;
+}
+
+input {
+    font-family: "Poppins", Arial;
+    font-size: 14px;
+    padding: 5px 0;
+    width: 300px;
+    background-color: #F5E2E2;
+    display: inline-block;
+    text-align: center;
+    opacity: 0.8;
+    border : 1px solid #BFBBBB;
+}
+
+input:focus {
+    outline: 1px solid rgba(173, 23, 100, 0.5);
+}
+
+.btn, .back {
+    padding: 5px 0;
+    margin-bottom: 5px;
+    width: 100px;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    opacity: 0.8;
+    border : 1px;
+    background-color: #BFBBBB;
+    font-family: "Poppins", Arial;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover, .back:hover{
+    opacity: 1;
+    color: #ad1764;
+}
+
+.btn:active, .back:active {
+    background-color: rgba(179, 84, 133, 0.5);
+    color: black;
+}
+
+#npm {
+    cursor: default;
+}
+
+/*.success, .fail {
+    font-family: "Poppins", Arial;
+    font-size: 18px;
+    padding-left: 5%;
+    padding-bottom: 20px;
+    color: #ad1764;
+}*/

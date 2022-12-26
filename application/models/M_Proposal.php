@@ -44,6 +44,7 @@ class M_Proposal extends CI_Model
 		$this->db->from($this->table);
 		$this->db->like('nama_kegiatan', $keyword);
         $this->db->or_like('status', $keyword);
+        $this->db->or_like('ketua_pelaksana', $keyword);
         $query = $this->db->get();
 		return $query->result();
 	}
