@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">DASHBOARD</h1>
     </div>
 
     <!-- Content Row -->
@@ -15,7 +15,8 @@
 
                 <div class="card-body">
                     <div class="text-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">SISPRO</h1>
+                        <h1 class="h3 mb-0 text-gray-800 font-weight-bold">SISPRO</h1>
+                        <br>
                         <p class="text-dark">Sispro adalah Aplikasi berbasis website untuk melakukan pengajuan proposal
                             bagi para UKM di Universitas Pembangunan Nasional "Veteran" Jawa Timur (UPNVJT). Di
                             lingkungan kampus, proposal biasanya digunakan dalam rangka menyampaikan rancangan kegiatan

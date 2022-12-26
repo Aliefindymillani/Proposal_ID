@@ -19,17 +19,18 @@
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url('assets')?>/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="<?= base_url('assets') ?>/css/layout.css" rel="stylesheet">
 
 </head>
 
-<body class="bg-gradient-info">
+<body class="bg-auth">
 
     <div class="container">
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
 
-            <div class="col-xl-9 col-lg-12 col-md-9">
+            <div class="col-xl-5 col-lg-12 col-md-9">
 
                 <div class="card o-hidden border-0 shadow-lg my-4">
                     <div class="card-body p-0">

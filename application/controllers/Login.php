@@ -13,7 +13,7 @@ class Login extends CI_Controller {
     function index()
 	{
         $data['title'] = "Login";
-        $data['title_page'] = "Login";
+        $data['title_page'] = "LOGIN";
         $this->templateuser->disp_login('login', $data);
 
 		if($this->session->userdata('is_login') == true) {
