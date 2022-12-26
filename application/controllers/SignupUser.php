@@ -14,7 +14,7 @@ class SignupUser extends CI_Controller {
     function index()
 	{
         $data['title'] = "Sign Up";
-        $data['title_page'] = "Sign Up";
+        $data['title_page'] = "SIGN UP";
         $this->templateuser->disp_signup_user('user/signup', $data);
 	}
 

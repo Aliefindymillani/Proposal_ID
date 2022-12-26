@@ -14,7 +14,7 @@ class Signup extends CI_Controller {
     function index()
 	{
         $data['title'] = "Sign Up Admin";
-        $data['title_page'] = "Sign Up Admin";
+        $data['title_page'] = "SIGN UP ADMIN";
         $this->templateadmin->disp_signup_admin('signup', $data);
 
 		if($this->session->userdata('is_login') == true) {
