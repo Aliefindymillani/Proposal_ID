@@ -20,11 +20,6 @@
     <!-- Divider -->
     <br class="sidebar-divider">
 
-    <!-- Heading -->
-    <div class="sidebar-heading">
-        Menu
-    </div>
-
     <!-- Nav Item - Charts -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url('home/form-proposal'); ?>">
@@ -48,11 +43,6 @@
 
     <!-- Divider -->
     <br class="sidebar-divider">
-
-    <!-- Heading -->
-    <div class="sidebar-heading">
-        Aksi
-    </div>
 
     <!-- Log Out -->
     <li class="nav-item">

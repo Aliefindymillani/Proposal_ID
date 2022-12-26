@@ -105,7 +105,7 @@
                                     </div>
                                     <br>
                                     <div class="text-center">
-                                        <button type="submit" class="btn btn-primary" value="submit" >Submit</button>
+                                    <button class="btn btn-search btn-user" type="submit" name="submit" style="border-radius: 35px!important; padding: 10px 20px 10px 20px;">Tambah</button>
                                     </div>
 
                                 </form>

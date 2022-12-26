@@ -1,5 +1,5 @@
 <div class="col-xl-12 col-md-6">
-    <div class="card">
+    <div class="card card-table">
         <div class="card-header bg-info">
             
         </div>
@@ -18,7 +18,7 @@
                 <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
                     <div class="row">
                         <div class="col-sm-12">
-                            <table class="table table-bordered" width="100%" cellspacing="0">
+                            <table class="table table-bordered tabel" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
                                         <th class="text-center">No.</th>
@@ -50,8 +50,8 @@
                                             <td><?= $row->tgl_mulai ?></td>
                                             <td><?= $row->tgl_selesai ?></td>
                                             <td><?= $row->status ?></td>
-                                            <td><a  onClick="return confirm('Lihat Proposal?')" href="<?= base_url(); ?>./assets/uploads/<?= $row->berkas_file; ?>" type="button" class="btn btn-info" target="_blank">Lihat</a></td>
-                                            <td><a  onClick="return confirm('Tolak Proposal?')" href="<?= base_url('admin/tolak-status/'.$row->id_proposal); ?>" type="button" class="btn btn-danger">Tolak</a></td>
+                                            <td><a  onClick="return confirm('Lihat Proposal?')" href="<?= base_url(); ?>./assets/uploads/<?= $row->berkas_file; ?>" type="button" class="btn btn-netral" target="_blank">Lihat</a></td>
+                                            <td><a  onClick="return confirm('Tolak Proposal?')" href="<?= base_url('admin/tolak-status/'.$row->id_proposal); ?>" type="button" class="btn btn-fail">Tolak</a></td>
                                             <td><a  onClick="return confirm('Terima Proposal?')" href="<?= base_url('admin/terima-status/'.$row->id_proposal); ?>" type="button" class="btn btn-success">Terima</a></td>
                                         </tr>
                                     <?php endforeach; ?>

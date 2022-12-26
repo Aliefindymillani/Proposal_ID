@@ -64,7 +64,7 @@
                                     </div>
                                     <br>
                                     <div class="text-center">
-                                        <button class="btn btn-search btn-user col-2" type="submit" name="submit">Tambah User</button>
+                                        <button class="btn btn-search btn-user" type="submit" name="submit">Tambah User</button>
                                     </div>
                                 </form>
                             </div>
