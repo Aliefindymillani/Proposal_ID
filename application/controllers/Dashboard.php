@@ -157,8 +157,65 @@ class Dashboard extends CI_Controller {
 		$status = 'TERIMA';
 		$this->M_UploadProposal->updateStatus($id, $status);
 		redirect('admin/kegiatan-masuk');
-
-
 	}
+
+	// update data
+	function update($username = null) {
+		$data['title'] = "Update Data User";
+		$data['title_page'] = "Update Data User";
+        if($this->input->post()) {
+            $data = $this->input->post();
+            $res = $this->M_AddUser->update_user($data);
+            if($res > 0) {
+                // $this->session->set_flashdata('msg','<p>Data gagal diubah</p>');
+                $this->session->set_flashdata('msg','
+                <div class="alert alert-danger fade show position-fixed top-3" role="alert">
+				    <strong>Failed!</strong> Data is failed to be updated.
+				    <button type="button" class="btn-close ml-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+			    </div>
+                ');
+            }
+            else {
+                // $this->session->set_flashdata('msg','<p>Data berhasil diubah</p>');
+                $this->session->set_flashdata('msg','
+                <div class="alert alert-success fade show position-fixed top-3" role="alert">
+				    <strong>Success!</strong> Data is succesfully updated.
+				    <button type="button" class="btn-close ml-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+			    </div>
+                ');
+            }
+            redirect('admin/list-user');
+        }
+        else {
+            if($username) {
+                $data['data_user'] = $this->M_AddUser->get_one($username);
+                $this->templateadmin->disp_update('dashboard/update_user', $data);
+            }
+        }
+    }
+
+    //delete data
+    function delete($username) {
+        $res = $this->M_AddUser->delete_user($username);
+        if($res > 0) {
+            // $this->session->set_flashdata('msg','<p>Data gagal dihapus</p>');
+            $this->session->set_flashdata('msg','
+                <div class="alert alert-danger fade show position-fixed top-3" role="alert">
+				    <strong>Failed!</strong> Data is failed to be deleted.
+				    <button type="button" class="btn-close ml-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+			    </div>
+                ');
+        }
+        else {
+            // $this->session->set_flashdata('msg','<p>Data berhasil dihapus</p>');
+            $this->session->set_flashdata('msg','
+                <div class="alert alert-success fade show position-fixed top-3" role="alert">
+				    <strong>Success!</strong> Data is succesfully deleted.
+				    <button type="button" class="btn-close ml-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+			    </div>
+                ');
+        }
+        redirect('admin/list-user');
+    }
 
 }

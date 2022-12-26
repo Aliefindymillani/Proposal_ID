@@ -34,7 +34,7 @@
                     <div class="mb-3 row">
                         <!-- <label class="col-2 col-form-label">Password</label> -->
                         <div class="col-12">
-                            <input type="text" class="form-control form-control-user" name="password" required="required" placeholder="Password" value="<?php echo $update->password ?>">
+                            <input type="hidden" class="form-control form-control-user" name="password" required="required" placeholder="Password" value="<?php echo $update->password ?>">
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                     <button class="btn btn-search btn-user col-7" type="submit" name="submit">Update</button>
                 </div>
                 <br>
-                <a href="<?php echo base_url().'home/admin' ?>" class="btn btn-dark btn-user btn-block">Kembali</a>
+                <a href="<?php echo base_url().'admin/list-user' ?>" class="btn btn-dark btn-user col-7">Kembali</a>
             </form>
             <br>
         </div>
