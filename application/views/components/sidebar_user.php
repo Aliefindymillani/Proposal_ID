@@ -2,13 +2,13 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/dashboard') ?>">
         <div class="sidebar-brand-icon rotate-n-15">
-            <img class="img" style="width: 50px; height: 50px" src="<?= base_url('assets') ?>/img/logo.png" alt="">
+        <img class="img" style="width: 50px; height: 50px" src="<?= base_url('assets') ?>/img/logoadmin.png" alt="Logo Sispro">
         </div>
         <div class="sidebar-brand-text mx-3">Sispro <br> <sup>User</sup></div>
     </a>
 
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <br class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
@@ -18,7 +18,7 @@
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider">
+    <br class="sidebar-divider">
 
     <!-- Heading -->
     <div class="sidebar-heading">
@@ -40,14 +40,14 @@
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('home/jadwal-proposal'); ?>">
+        <a class="nav-link" href="<?= base_url('home/jadwal-kegiatan'); ?>">
             <i class="fas fa-cog"></i>
             <span>Jadwal Kegiatan</span>
         </a>
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider">
+    <br class="sidebar-divider">
 
     <!-- Heading -->
     <div class="sidebar-heading">
@@ -57,7 +57,7 @@
     <!-- Log Out -->
     <li class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer;">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-arrow-right"></i>
             <span>Log Out</span>
         </a>
 

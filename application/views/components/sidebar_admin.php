@@ -3,7 +3,7 @@
     <a class="sidebar-brand d-flex align-items-center justify-content-center"
         href="<?php echo base_url() . 'admin/home' ?>">
         <div class="sidebar-brand-icon rotate-n-15">
-            <img class="img" style="width: 50px; height: 50px" src="<?= base_url('assets') ?>/img/logoadmin.png" alt="">
+            <img class="img" style="width: 50px; height: 50px" src="<?= base_url('assets') ?>/img/logoadmin.png" alt="Logo Sispro">
         </div>
         <div class="sidebar-brand-text mx-3">Sinpro <sup>admnistrator</sup></div>
     </a>
@@ -70,7 +70,7 @@
     <!-- Log Out -->
     <li class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer;">
-            <i class="fas fa-fw fa-chart-area"></i>
+            <i class="fas fa-fw fa-arrow-right"></i>
             <span>Log Out</span>
         </a>
 

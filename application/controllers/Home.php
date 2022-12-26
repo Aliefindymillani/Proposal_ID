@@ -92,9 +92,16 @@ class Home extends CI_Controller
     public function jadwal()
     {
         $username = $this->session->userdata('username');
-        $data['title'] = "Jadwal Kegiatan";
+		$keyword  = $this->input->post('search');
 		$data['users'] = $this->session->userdata('username');
-        $data["data_proposal"] = $this->M_Proposal->getStatusByUser($username);
-        $this->templateuser->disp_jadwal('user/jadwal', $data);
+		if (!empty($keyword)) {
+			$data['title'] = "Jadwal Kegiatan";
+			$data['data_proposal']=$this->M_Proposal->searchByUser($username,$keyword);
+			$this->templateuser->disp_jadwal('user/jadwal', $data);
+		}else {
+			$data['title'] = "Jadwal Kegiatan";
+			$data["data_proposal"] = $this->M_Proposal->getStatusByUser($username);
+			$this->templateuser->disp_jadwal('user/jadwal', $data);
+		}
     }
 }
