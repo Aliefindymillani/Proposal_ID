@@ -67,7 +67,7 @@
                                                 class="col-2 col-form-label">Deskripsi</label>
                                             <div class="col-10">
                                                 <textarea class="form-control"
-                                                    id="exampleFormControlTextarea1" rows="3" name="deskripsi" placeholder="deskripsi"></textarea>
+                                                    id="exampleFormControlTextarea1" rows="3" name="deskripsi" placeholder="Deskripsi Kegiatan"></textarea>
                                             </div>
                                         </div>
                                     </div>

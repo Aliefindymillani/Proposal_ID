@@ -9,7 +9,9 @@
 
         <!-- Modal Logout -->
         <li>
-            <p class="mb-0 text-gray-900 col mr-2"> Welcome <?= $users; ?>!</p>
+            <p class="mb-0 text-gray-900 col mr-2"> Welcome <?= $users; ?>!
+                <i class="fas fa-fw fa-user-circle" style="font-size:20pt; color:#435353!important;"></i>
+            </p>
         </li>
     </ul>
 </nav>

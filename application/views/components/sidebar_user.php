@@ -13,7 +13,7 @@
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="<?= base_url('/home') ?>">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-home"></i>
             <span>Dashboard</span></a>
     </li>
 
@@ -28,20 +28,20 @@
     <!-- Nav Item - Charts -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url('home/form-proposal'); ?>">
-            <i class="fas fa-cog"></i>
+            <i class="fas fa-fw fa-file-upload"></i>
             <span>Tambah Pengajuan</span>
         </a>
 
     </li>
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url('home/status-proposal'); ?>">
-            <i class="fas fa-cog"></i>
+            <i class="fas fa-fw fa-check-circle"></i>
             <span>Status Pengajuan</span>
         </a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url('home/jadwal-kegiatan'); ?>">
-            <i class="fas fa-cog"></i>
+            <i class="fas fa-fw fa-table"></i>
             <span>Jadwal Kegiatan</span>
         </a>
     </li>
