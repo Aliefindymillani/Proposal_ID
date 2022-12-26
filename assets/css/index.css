@@ -1,0 +1,119 @@
+body {
+    background-color: #c7c6bf;
+}
+
+.tabel-data {
+    margin-top: 20px;
+}
+
+ul li{
+    font-family: "Poppins", Arial;
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 30px;
+}
+
+ul li a {
+    color: #ad1764;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: black;
+    transition: .4s;
+}
+
+h1, .msg {
+    font-family: "Poppins", Arial;
+    color: black;
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    padding-left: 5%;
+}
+
+h3 {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins", Arial;
+    font-size : 28px;
+    color: black;
+    align-items: center;
+    padding-left: 5%;
+}
+
+table {
+    margin: 0 auto;
+    max-width: 100%;
+    border-collapse: collapse;
+    font-family: "Poppins", Arial;
+    font-size: 14px !important;
+    vertical-align: text-top;
+    text-align: left;
+    margin-bottom: 5%;
+    border-end-start-radius: 25px;
+    border-end-end-radius: 25px;
+    border-start-end-radius: 25px;
+    border-start-start-radius: 25px;
+}
+
+table thead tr td {
+    background-color: #D7A095;
+    /* border: 1px solid #625151; */
+    padding: 5px;
+    font-size: 14px !important;
+    font-weight: 600;
+}
+
+table tbody {
+    background-color: #F7F5F5;
+}
+
+table tbody tr td {
+    /* border: 1px solid #625151; */
+    padding: 50px;
+}
+
+table, thead {
+    font-family: "Poppins", Arial;
+    font-size: 20px;
+    vertical-align: text-top;
+    text-align: center;
+    /* height: 20px; */
+}
+
+table tr td a {
+    color: #ad1764;
+    text-decoration: none;
+}
+
+table tr td a:hover {
+    color: black;
+    transition: .4s;
+}
+
+table tbody td:first-child {
+    padding-left: 25px;
+}
+
+table tbody td:last-child {
+    padding-right: 25px;
+}
+
+/* table tbody td:nth-child(2), table tbody td:nth-child(4) {
+    padding-left: 20px;
+}
+
+table tbody td:first-child, table tbody td:nth-child(3), table tbody td:last-child {
+    padding-left: 15px;
+    padding-right: 15px;;
+    text-align: center;
+} */
+
+.table-scrollable {
+    overflow-x: auto;
+    max-width: 1200px;
+    max-height: 500px;
+    height: 100%;
+    margin: auto;
+  }

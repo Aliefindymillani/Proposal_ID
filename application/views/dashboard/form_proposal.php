@@ -20,7 +20,6 @@
 			<div class="invalid-feedback"><?= $error ?></div>
 		<?php endif; ?>
 
-        <!-- Earnings (Monthly) Card Example -->
         <div class="col-xl-12 col-md-6">
             <div class="card">
                 <div class="card-header bg-info">

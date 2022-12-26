@@ -60,7 +60,7 @@ $route['home/form-proposal'] = 'home/tambah';
 $route['home/proses-proposal'] = 'home/prosesuploadform';
 
 $route['home/status-proposal'] = 'home/status';
-$route['home/jadwal-proposal'] = 'home/jadwal';
+$route['home/jadwal-kegiatan'] = 'home/jadwal';
 // $route['tambah-ajuan'] = 'user/pengajuan';
 // $route['student/update/(:any)'] = 'student/update/$1';
 // $route['user-register'] = 'regisuser';

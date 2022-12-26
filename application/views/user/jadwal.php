@@ -14,6 +14,16 @@
 
         </div>
         <div class="card-body">
+          <!-- (A) SEARCH FORM -->
+          <div class="col justify-content-end d-flex mb-2">
+              <form class="form-inline" role="form"
+                  action="<?php echo base_url() . 'home/jadwal-kegiatan'; ?>" method="post">
+                  <div class="form-group" style="padding-right:10px;">
+                      <input type="text" class="form-control" name="search" placeholder="Search...">
+                  </div>
+                  <button type="submit" class="btn btn-search" name="submit">Search</button>
+              </form>
+          </div>
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
