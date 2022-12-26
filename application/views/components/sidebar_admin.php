@@ -32,7 +32,7 @@
     <li class="nav-item">
         <a class="nav-link" href="<?php echo base_url() . 'admin/list-user' ?>">
             <i class="fas fa-fw fa-users"></i>
-            <span>List User</span>
+            <span>Daftar User</span>
         </a>
     </li>
     <li class="nav-item">

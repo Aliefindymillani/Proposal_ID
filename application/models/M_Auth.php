@@ -6,7 +6,7 @@ class M_Auth extends CI_Model
 	{
         parent::__construct();
 	}
- 
+    
 	function signup($email, $username, $password, $name, $akses)
 	{
 		$data_user = array(

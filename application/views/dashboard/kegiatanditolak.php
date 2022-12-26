@@ -47,7 +47,7 @@
                                             <td><?= $row->tgl_mulai ?></td>
                                             <td><?= $row->tgl_selesai ?></td>
                                             <td><?= $row->status ?></td>
-                                            <td><a  onClick="return confirm('Lihat Proposal?')" href="<?= base_url(); ?>./assets/uploads/<?= $row->berkas_file; ?>" type="button" class="btn btn-info" target="_blank">Lihat</a></td>
+                                            <td><a  onClick="return confirm('Lihat Proposal?')" href="<?= base_url(); ?>./assets/uploads/<?= $row->berkas_file; ?>" type="button" class="btn btn-netral" target="_blank">Lihat</a></td>
                                         </tr>
                                     <?php endforeach; ?>
 
