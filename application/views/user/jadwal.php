@@ -31,7 +31,7 @@
                         <th class="text-center">No.</th>
                         <th class="text-center">Nama Kegiatan</th>
                         <th class="text-center">Ketua Pelaksana</th>
-                        <th class="text-center">Pengajuan</th>
+                        <th class="text-center">Tanggal Pengajuan</th>
                         <th class="text-center">Deskripsi</th>
                         <th class="text-center" colspan="2">Mulai - Selesai</th>
                         <th class="text-center">Status</th>
@@ -55,7 +55,7 @@
                             <td><?= $row->tgl_mulai ?></td>
                             <td><?= $row->tgl_selesai ?></td>
                             <td><?= $row->status ?></td>
-                            <td><a  onClick="return confirm('Lihat Proposal?')" href="<?= base_url(); ?>./assets/uploads/<?= $row->berkas_file; ?>" type="button" class="btn btn-info" target="_blank">Lihat</a></td>
+                            <td><a  onClick="return confirm('Lihat Proposal?')" href="<?= base_url(); ?>./assets/uploads/<?= $row->berkas_file; ?>" type="button" class="btn btn-netral text-center" target="_blank">Lihat</a></td>
                         </tr>
                     <?php endforeach; ?>
 

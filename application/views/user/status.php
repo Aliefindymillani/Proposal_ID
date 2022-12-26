@@ -59,7 +59,7 @@
                                     <td><?= $row->status ?></td>
                                     <td><a onClick="return confirm('Lihat Proposal?')"
                                             href="<?= base_url(); ?>./assets/uploads/<?= $row->berkas_file; ?>"
-                                            type="button" class="btn btn-info" target="_blank">Lihat Pdf</a></td>
+                                            type="button" class="btn btn-netral" target="_blank">Lihat</a></td>
 
                                     <?php endforeach; ?>
 
