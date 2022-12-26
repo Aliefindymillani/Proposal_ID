@@ -79,6 +79,7 @@ $route['admin/proses-proposal'] = 'Dashboard/prosesuploadform';
 $route['admin/tolak-status/(:num)'] = 'Dashboard/tolakstatus/$1';
 $route['admin/terima-status/(:num)'] = 'Dashboard/terimastatus/$1';
 $route['admin/search_keyword'] = 'Dashboard/search_keyword';
+$route['admin/update/(:any)'] = 'Dashboard/update/$1';
 
 //auth
 $route['logout'] = 'login/logout';

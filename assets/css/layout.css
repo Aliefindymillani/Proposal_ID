@@ -32,15 +32,15 @@ body {
     border-radius: 20px 20px 0 0 !important;
 }
 
-.btn-success {
-    background-color: #A6C3A1;
-    border: 0;
-    padding: 10px 15px 10px 15px;
-}
-
 .btn-success:hover, .btn-fail:hover, .btn-netral:hover, .btn-search:hover {
     background-color: #363636 !important;
     color: #ffffff;
+}
+
+.btn-success {
+    background-color: #7ca775;
+    border: 0;
+    padding: 10px 15px 10px 15px;
 }
 
 .btn-netral {
@@ -51,7 +51,7 @@ body {
 }
 
 .btn-fail {
-    background-color: #C3A1A1;
+    background-color: #ad5050 !important;
     color:#ffffff !important;
     border: 0;
     padding: 10px 15px 10px 15px;

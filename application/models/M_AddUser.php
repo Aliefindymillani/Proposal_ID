@@ -19,7 +19,6 @@ class M_AddUser extends CI_Model
 		);
 		$this->db->insert('user',$data_user);
 	}
-
 	
 	public function getAll()
     {
@@ -30,6 +29,18 @@ class M_AddUser extends CI_Model
         //fungsi diatas seperti halnya query 
         //select * from mahasiswa order by IdMhsw desc
     }
+	
+	function searchUser($keyword)
+	{
+		$this->db->from($this->table);
+		$this->db->like('username', $keyword);
+        $this->db->or_like('name', $keyword);
+        $this->db->or_like('email', $keyword);
+        $this->db->or_like('akses', $keyword);
+        $query = $this->db->get();
+		return $query->result();
+	}
 
+	
 }
 ?>
