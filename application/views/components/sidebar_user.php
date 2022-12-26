@@ -1,4 +1,4 @@
-<ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+<ul class="navbar-nav sidebar sidebar-light accordion side-bar" id="accordionSidebar">
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('/dashboard') ?>">
         <div class="sidebar-brand-icon rotate-n-15">
@@ -54,10 +54,31 @@
         Aksi
     </div>
 
-    <!-- Nav Item - Charts -->
+    <!-- Log Out -->
     <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('/admin/signup') ?>">
+        <a class="nav-link" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer;">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Sign Up</span></a>
+            <span>Log Out</span>
+        </a>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Log Out</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Apakah anda akan log out?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a class="btn btn-danger" href="<?php echo base_url().'logout' ?>">Yes</a>
+                </div>
+                </div>
+            </div>
+        </div>
     </li>
 </ul>

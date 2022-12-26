@@ -45,17 +45,16 @@ class Dashboard extends CI_Controller {
 
 	public function kegiatanmasuk()
 	{
+		$data['users'] = $this->session->userdata('username');
 		$keyword=$this->input->post('search');
 		if (!empty($keyword)) {
 			$data['title'] = "Kegiatan Masuk";
 			$data['title_page'] = "Kegiatan Masuk";
-			$data['users'] = $this->session->userdata('username');
 			$data['data_proposal']=$this->M_Proposal->search($keyword);
-			$this->templateadmin->disp_kegiatan_masuk('dashboard/empty_table', $data);
+			$this->templateadmin->disp_kegiatan_masuk('dashboard/kegiatanmasuk', $data);
 		}else {
 			$data['title'] = "Kegiatan Masuk";
 			$data['title_page'] = "Kegiatan Masuk";
-			$data['users'] = $this->session->userdata('username');
 			$data["data_proposal"] = $this->M_Proposal->getAll();
 			$this->templateadmin->disp_kegiatan_masuk('dashboard/kegiatanmasuk', $data);
 		}
@@ -63,17 +62,16 @@ class Dashboard extends CI_Controller {
 
 	public function kegiatanditerima()
 	{
+		$data['users'] = $this->session->userdata('username');
 		$keyword=$this->input->post('search');
 		if (!empty($keyword)) {
 			$data['title'] = "Kegiatan Diterima";
 			$data['title_page'] = "Kegiatan Diterima";
-			$data['users'] = $this->session->userdata('username');
 			$data['data_proposal']=$this->M_Proposal->search($keyword);
-			$this->templateadmin->disp_kegiatan_diterima('dashboard/empty_table', $data);
+			$this->templateadmin->disp_kegiatan_diterima('dashboard/kegiatanditerima', $data);
 		}else {
 			$data['title'] = "Kegiatan Diterima";
 			$data['title_page'] = "Kegiatan Diterima";
-			$data['users'] = $this->session->userdata('username');
 			$data["data_proposal"] = $this->M_Proposal->getStatus('TERIMA');
 			$this->templateadmin->disp_kegiatan_diterima('dashboard/kegiatanditerima', $data);
 		}
@@ -81,18 +79,16 @@ class Dashboard extends CI_Controller {
 
 	public function kegiatanditolak()
 	{
-
+		$data['users'] = $this->session->userdata('username');
 		$keyword=$this->input->post('search');
 		if (!empty($keyword)) {
 			$data['title'] = "Kegiatan Ditolak";
 			$data['title_page'] = "Kegiatan Ditolak";
-			$data['users'] = $this->session->userdata('username');
 			$data['data_proposal']=$this->M_Proposal->search($keyword);
-			$this->templateadmin->disp_kegiatan_ditolak('dashboard/empty_table', $data);
+			$this->templateadmin->disp_kegiatan_ditolak('dashboard/kegiatanditolak', $data);
 		}else {
 			$data['title'] = "Kegiatan Ditolak";
 			$data['title_page'] = "Kegiatan Ditolak";
-			$data['users'] = $this->session->userdata('username');
 			$data["data_proposal"] = $this->M_Proposal->getStatus('TOLAK');
 			$this->templateadmin->disp_kegiatan_ditolak('dashboard/kegiatanditolak', $data);
 		}

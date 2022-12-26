@@ -3,10 +3,15 @@ body {
 }
 
 .sidebar {
-    background-color: #AAD4D0;
+    background-color: #435353;
     /* font-family: "Poppins"; */
 }
 
 .sidebar a, i, .sidebar-heading, .sidebar-divider {
-    color: #353535 !important;
+    color: #f1f1f1 !important;
+}
+
+.card-header, .btn-search {
+    background-color: #435353 !important;
+    color:#f1f1f1;
 }

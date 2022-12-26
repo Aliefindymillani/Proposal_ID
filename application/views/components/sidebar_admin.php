@@ -9,7 +9,7 @@
     </a>
 
     <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+    <br class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
@@ -19,7 +19,7 @@
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider">
+    <br class="sidebar-divider">
 
     <!-- Heading -->
     <div class="sidebar-heading">
@@ -60,14 +60,14 @@
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider">
+    <br class="sidebar-divider">
 
     <!-- Heading -->
     <div class="sidebar-heading">
         Aksi
     </div>
 
-    <!-- Nav Item - Charts -->
+    <!-- Log Out -->
     <li class="nav-item">
         <a class="nav-link" data-toggle="modal" data-target="#exampleModal" style="cursor: pointer;">
             <i class="fas fa-fw fa-chart-area"></i>

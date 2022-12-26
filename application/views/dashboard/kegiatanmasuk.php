@@ -11,7 +11,7 @@
                     <div class="form-group" style="padding-right:10px;">
                         <input type="text" class="form-control" name="search" placeholder="Search...">
                     </div>
-                    <button type="submit" class="btn btn-info" name="submit" >Search</button>
+                    <button type="submit" class="btn btn-search" name="submit" >Search</button>
                 </form>
             </div>
             <div class="table-responsive">

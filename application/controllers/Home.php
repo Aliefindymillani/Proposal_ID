@@ -23,6 +23,7 @@ class Home extends CI_Controller
     public function index()
     {
         $data['title'] = "Home";
+		$data['users'] = $this->session->userdata('username');
         $this->templateuser->disp_dashboard('user/dashboard', $data);
         if($this->session->userdata('is_login') == true) {
 			if ($this->session->userdata('akses')=='admin') {
@@ -33,8 +34,10 @@ class Home extends CI_Controller
     public function tambah()
     {
         $data['title'] = "Pengajuan";
+		$data['users'] = $this->session->userdata('username');
         $this->templateuser->disp_pengajuan('user/pengajuan', $data);
     }
+	
     public function prosesuploadform()
 	{
 		
@@ -71,6 +74,7 @@ class Home extends CI_Controller
     public function status()
     {
         
+		$data['users'] = $this->session->userdata('username');
         $keyword  = $this->input->post('search');
         $username = $this->session->userdata('username');
 		if (!empty($keyword)) {
@@ -89,6 +93,7 @@ class Home extends CI_Controller
     {
         $username = $this->session->userdata('username');
         $data['title'] = "Jadwal Kegiatan";
+		$data['users'] = $this->session->userdata('username');
         $data["data_proposal"] = $this->M_Proposal->getStatusByUser($username);
         $this->templateuser->disp_jadwal('user/jadwal', $data);
     }
