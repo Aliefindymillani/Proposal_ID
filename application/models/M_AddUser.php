@@ -6,7 +6,7 @@ class M_AddUser extends CI_Model
 	{
         parent::__construct();
 	}
-	private $table = 'user';
+	public $table = 'user';
  
 	function adduser($email, $username, $password, $name, $akses)
 	{
@@ -45,8 +45,8 @@ class M_AddUser extends CI_Model
     }
 
     function update_user($data_user) {
-        $sql = "UPDATE `user` SET `email` = ?, `username` = ?, `password` = ?, `name` = ?, `akses` = ? WHERE `username` = ?";
-        $this->db->query($sql, array($data_user['email'], $data_user['username'], $data_user['password'], $data_user['name'], $data_user['akses']));
+        $sql = "UPDATE user SET `name` = ?, email = ?, `password` = ?, akses = ? WHERE username = ?";
+        $this->db->query($sql, array($data_user['name'], $data_user['email'], $data_user['password'], $data_user['akses'], $data_user['username']));
     }
 
     function delete_user($username) {

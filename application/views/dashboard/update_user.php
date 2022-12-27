@@ -34,14 +34,14 @@
                     <div class="mb-3 row">
                         <!-- <label class="col-2 col-form-label">Password</label> -->
                         <div class="col-12">
-                            <input type="hidden" class="form-control form-control-user" name="password" required="required" placeholder="Password" value="<?php echo $update->password ?>">
+                            <input type="hidden" class="form-control form-control-user" name="password" required="required" placeholder="Password" value="<?php echo $update->password ?>" readonly>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="mb-3 row">
                         <div class="col-12">
-                            <input type="hidden" class="form-control form-control-user" name="akses" required="required" value="user"  value="<?php echo $update->akses ?>" readonly>
+                            <input type="hidden" class="form-control form-control-user" name="akses" required="required" value="<?php echo $update->akses ?>" readonly>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,9 @@
                     <button class="btn btn-search btn-user col-7" type="submit" name="submit">Update</button>
                 </div>
                 <br>
-                <a href="<?php echo base_url().'admin/list-user' ?>" class="btn btn-dark btn-user col-7">Kembali</a>
+                <div class="text-center">
+                    <a href="<?php echo base_url().'admin/list-user' ?>" class="btn btn-dark btn-user col-7">Kembali</a>
+                </div>
             </form>
             <br>
         </div>
