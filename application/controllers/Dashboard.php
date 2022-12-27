@@ -194,6 +194,7 @@ class Dashboard extends CI_Controller {
         }
     }
 
+
     //delete data
     function delete($username) {
         $res = $this->M_AddUser->delete_user($username);

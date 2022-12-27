@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'signupuser';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
 // user
 $route['home'] = 'home';
 $route['sign-up'] = 'signupuser';
@@ -61,9 +62,6 @@ $route['home/proses-proposal'] = 'home/prosesuploadform';
 
 $route['home/status-proposal'] = 'home/status';
 $route['home/jadwal-kegiatan'] = 'home/jadwal';
-// $route['tambah-ajuan'] = 'user/pengajuan';
-// $route['student/update/(:any)'] = 'student/update/$1';
-// $route['user-register'] = 'regisuser';
 
 //admin
 $route['admin/signup'] = 'signup';
