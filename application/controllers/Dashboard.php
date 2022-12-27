@@ -123,6 +123,16 @@ class Dashboard extends CI_Controller {
 			$this->templateadmin->disp_kegiatan_diterima('dashboard/kegiatanditerima', $data);
 		}else {
 			$data["data_proposal"] = $this->M_Proposal->getStatus('TERIMA');
+
+			// Pagination
+			$jumlah_dataacc = $this->M_Proposal->jumlah_dataacc('TERIMA');
+			$config['base_url'] = base_url().'admin/kegiatan-diterima';
+			$config['total_rows'] = $jumlah_dataacc;
+			$config['per_page'] = 2;
+			$from = $this->uri->segment(3);
+			$this->pagination->initialize($config);	
+			$data["data_proposal"] = $this->M_Proposal->data_acc('TERIMA', $config['per_page'],$from);
+
 			$this->templateadmin->disp_kegiatan_diterima('dashboard/kegiatanditerima', $data);
 		}
 	}
