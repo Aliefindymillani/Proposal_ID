@@ -61,15 +61,20 @@ $route['home/form-proposal'] = 'home/tambah';
 $route['home/proses-proposal'] = 'home/prosesuploadform';
 
 $route['home/status-proposal'] = 'home/status';
+$route['home/status-proposal/(:any)'] = 'home/status/$1';
 $route['home/jadwal-kegiatan'] = 'home/jadwal';
+$route['home/jadwal-kegiatan/(:any)'] = 'home/jadwal/$1';
 
 //admin
 $route['admin/signup'] = 'signup';
 $route['admin/signup/process'] = 'signup/process';
 $route['admin/home'] = 'Dashboard';
 $route['admin/kegiatan-diterima'] = 'Dashboard/kegiatanditerima';
+$route['admin/kegiatan-diterima/(:any)'] = 'Dashboard/kegiatanditerima/$1';
 $route['admin/kegiatan-ditolak'] = 'Dashboard/kegiatanditolak';
+$route['admin/kegiatan-ditolak/(:any)'] = 'Dashboard/kegiatanditolak/$1';
 $route['admin/kegiatan-masuk'] = 'Dashboard/kegiatanmasuk';
+$route['admin/kegiatan-masuk/(:any)'] = 'Dashboard/kegiatanmasuk/$1';
 $route['admin/list-user'] = 'Dashboard/listuser';
 $route['admin/list-user/(:any)'] = 'Dashboard/listuser/$1';
 $route['admin/tambah-user'] = 'Dashboard/tambahuser';

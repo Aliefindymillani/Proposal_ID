@@ -81,5 +81,26 @@ class M_Proposal extends CI_Model
         return $query;
     }
 
+    function data_pro($number, $offset) {
+		return $query = $this->db->get($this->table, $number, $offset)->result();	
+	}
+ 
+	function jumlah_datapro() {
+		return $this->db->get($this->table)->num_rows();
+	}
+
+    function data_acc($status, $number, $offset) {
+        $this->db->order_by("tgl_pengajuan", "asc");
+		$this->db->where('status', $status);
+        $query = $this->db->get($this->table, $number, $offset);
+        return $query->result();
+	}
+ 
+	function jumlah_dataacc($status) {
+        $this->db->order_by("tgl_pengajuan", "asc");
+		$this->db->where('status', $status);
+        $query = $this->db->get($this->table);
+        return $query->num_rows();
+	}
 }
 ?>
