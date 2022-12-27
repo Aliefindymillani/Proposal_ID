@@ -6,12 +6,35 @@ class Dashboard extends CI_Controller {
         parent::__construct();
 		$this->load->helper('url');
         $this->load->library('TemplateAdmin');
+        $this->load->library('pagination');
 		$this->load->model('M_UploadProposal');
 		$this->load->model('M_Proposal');
 		$this->load->model('M_AddUser');
 		if(!$this->session->userdata('username')){
             redirect('login');
         }
+
+		// Styling Pagination
+		$config['first_link']       = 'First';
+		$config['last_link']        = 'Last';
+		$config['next_link']        = 'Next';
+		$config['prev_link']        = 'Prev';
+		$config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination justify-content-center">';
+		$config['full_tag_close']   = '</ul></nav></div>';
+		$config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
+		$config['num_tag_close']    = '</span></li>';
+		$config['cur_tag_open']     = '<li class="page-item active"><span class="page-link" style="background-color: #91aaad !Important; border-color: #91aaad;">';
+		$config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
+		$config['next_tag_open']    = '<li class="page-item"><span class="page-link">';
+		$config['next_tagl_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
+		$config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';
+		$config['prev_tagl_close']  = '</span>Next</li>';
+		$config['first_tag_open']   = '<li class="page-item"><span class="page-link">';
+		$config['first_tagl_close'] = '</span></li>';
+		$config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
+		$config['last_tagl_close']  = '</span></li>';
+
+		$this->pagination->initialize($config);
     }
 
 	public function index()
@@ -29,6 +52,7 @@ class Dashboard extends CI_Controller {
 			}
 	  	}
 	}
+
 	public function tambahuser()
 	{
 		$data['title'] = "Tambah User";
@@ -42,15 +66,23 @@ class Dashboard extends CI_Controller {
 		$data['title'] = "Daftar User";
 		$data['title_page'] = "DAFTAR USER";
 		$data['users'] = $this->session->userdata('username');
-		// $data["data_user"] = $this->M_AddUser->getAll();
-		// $this->templateadmin->disp_list_user('dashboard/listuser', $data);
 
 		$keyword=$this->input->post('searchUser');
 		if (!empty($keyword)) {
-			$data['data_user']=$this->M_AddUser->searchUser($keyword);
+			$data["data_user"]=$this->M_AddUser->searchUser($keyword);
 			$this->templateadmin->disp_list_user('dashboard/listuser', $data);
 		}else {
 			$data["data_user"] = $this->M_AddUser->getAll();
+
+			// Pagination
+			$jumlah_data = $this->M_AddUser->jumlah_data();
+			$config['base_url'] = base_url().'admin/list-user';
+			$config['total_rows'] = $jumlah_data;
+			$config['per_page'] = 5;
+			$from = $this->uri->segment(3);
+			$this->pagination->initialize($config);		
+			$data['data_user'] = $this->M_AddUser->data($config['per_page'],$from);
+
 			$this->templateadmin->disp_list_user('dashboard/listuser', $data);
 		}
 	}
