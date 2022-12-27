@@ -47,9 +47,11 @@
                     </tbody>
                 </table>
                 <br/>
-                <?php 
-                echo $this->pagination->create_links();
-                ?>
+                <div class="pagination justify-content-center">
+                    <?php 
+                    echo $this->pagination->create_links();
+                    ?>
+                </div>
             </div>
         </div>
     </div>
