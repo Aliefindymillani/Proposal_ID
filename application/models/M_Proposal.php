@@ -83,10 +83,6 @@ class M_Proposal extends CI_Model
 
     function data_pro($number, $offset) {
 		return $query = $this->db->get($this->table, $number, $offset)->result();	
-        // $this->db->from($this->table, $number, $offset);
-        // $this->db->order_by("id_proposal", "desc");
-        // $query = $this->db->get();
-        // return $query->result();	
 	}
  
 	function jumlah_datapro() {
