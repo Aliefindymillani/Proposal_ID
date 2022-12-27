@@ -139,16 +139,25 @@ class Dashboard extends CI_Controller {
 
 	public function kegiatanditolak()
 	{
+		$data['title'] = "Kegiatan Ditolak";
 		$data['title_page'] = "KEGIATAN DITOLAK";
 		$data['users'] = $this->session->userdata('username');
 		$keyword=$this->input->post('search');
 		if (!empty($keyword)) {
-			$data['title'] = "Kegiatan Ditolak";
 			$data['data_proposal']=$this->M_Proposal->search($keyword);
 			$this->templateadmin->disp_kegiatan_ditolak('dashboard/kegiatanditolak', $data);
 		}else {
-			$data['title'] = "Kegiatan Ditolak";
 			$data["data_proposal"] = $this->M_Proposal->getStatus('TOLAK');
+
+			// Pagination
+			$jumlah_dataacc = $this->M_Proposal->jumlah_dataacc('TOLAK');
+			$config['base_url'] = base_url().'admin/kegiatan-ditolak';
+			$config['total_rows'] = $jumlah_dataacc;
+			$config['per_page'] = 2;
+			$from = $this->uri->segment(3);
+			$this->pagination->initialize($config);	
+			$data["data_proposal"] = $this->M_Proposal->data_acc('TOLAK', $config['per_page'],$from);
+
 			$this->templateadmin->disp_kegiatan_ditolak('dashboard/kegiatanditolak', $data);
 		}
 	}
