@@ -71,6 +71,7 @@ $route['admin/kegiatan-diterima'] = 'Dashboard/kegiatanditerima';
 $route['admin/kegiatan-ditolak'] = 'Dashboard/kegiatanditolak';
 $route['admin/kegiatan-masuk'] = 'Dashboard/kegiatanmasuk';
 $route['admin/list-user'] = 'Dashboard/listuser';
+$route['admin/list-user/(:any)'] = 'Dashboard/listuser/$1';
 $route['admin/tambah-user'] = 'Dashboard/tambahuser';
 $route['admin/form-proposal'] = 'Dashboard/formproposal';
 $route['admin/proses-proposal'] = 'Dashboard/prosesuploadform';

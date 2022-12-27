@@ -27,7 +27,8 @@
                     </thead>
                     <tbody>
                         <?php 
-                        $no = 1;
+                        $no = $this->uri->segment('3') + 1;
+                        // $no = 1;
                         foreach ($data_user as $row) : 
                         
                         ?>
@@ -45,6 +46,10 @@
 
                     </tbody>
                 </table>
+                <br/>
+                <?php 
+                echo $this->pagination->create_links();
+                ?>
             </div>
         </div>
     </div>

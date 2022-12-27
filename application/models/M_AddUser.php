@@ -55,9 +55,6 @@ class M_AddUser extends CI_Model
             "akses" => $this->input->post('akses'),
         );
         return $this->db->update($this->table, $data, array('username' => $this->input->post('username')));
-
-        //$sql = "UPDATE `user` SET `email` = ?, `username` = ?, `password` = ?, `name` = ?, `akses` = ? WHERE `username` = ?";
-        //$this->db->query($sql, array($data_user['email'], $data_user['username'], $data_user['password'], $data_user['name'], $data_user['akses']));
     }
 
     function delete_user($username)
@@ -65,4 +62,12 @@ class M_AddUser extends CI_Model
         $this->db->where('username', $username);
         $this->db->delete('user');
     }
+
+    function data($number,$offset) {
+		return $query = $this->db->get('user', $number, $offset)->result();		
+	}
+ 
+	function jumlah_data() {
+		return $this->db->get('user')->num_rows();
+	}
 }

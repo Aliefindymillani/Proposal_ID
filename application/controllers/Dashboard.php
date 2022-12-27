@@ -6,6 +6,7 @@ class Dashboard extends CI_Controller {
         parent::__construct();
 		$this->load->helper('url');
         $this->load->library('TemplateAdmin');
+        $this->load->library('pagination');
 		$this->load->model('M_UploadProposal');
 		$this->load->model('M_Proposal');
 		$this->load->model('M_AddUser');
@@ -29,6 +30,7 @@ class Dashboard extends CI_Controller {
 			}
 	  	}
 	}
+
 	public function tambahuser()
 	{
 		$data['title'] = "Tambah User";
@@ -42,15 +44,23 @@ class Dashboard extends CI_Controller {
 		$data['title'] = "Daftar User";
 		$data['title_page'] = "DAFTAR USER";
 		$data['users'] = $this->session->userdata('username');
-		// $data["data_user"] = $this->M_AddUser->getAll();
-		// $this->templateadmin->disp_list_user('dashboard/listuser', $data);
 
 		$keyword=$this->input->post('searchUser');
 		if (!empty($keyword)) {
-			$data['data_user']=$this->M_AddUser->searchUser($keyword);
+			$data["data_user"]=$this->M_AddUser->searchUser($keyword);
 			$this->templateadmin->disp_list_user('dashboard/listuser', $data);
 		}else {
 			$data["data_user"] = $this->M_AddUser->getAll();
+
+			// Pagination
+			$jumlah_data = $this->M_AddUser->jumlah_data();
+			$config['base_url'] = base_url().'admin/list-user';
+			$config['total_rows'] = $jumlah_data;
+			$config['per_page'] = 5;
+			$from = $this->uri->segment(3);
+			$this->pagination->initialize($config);		
+			$data['data_user'] = $this->M_AddUser->data($config['per_page'],$from);
+
 			$this->templateadmin->disp_list_user('dashboard/listuser', $data);
 		}
 	}
