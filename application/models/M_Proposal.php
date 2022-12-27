@@ -81,5 +81,12 @@ class M_Proposal extends CI_Model
         return $query;
     }
 
+    function data_pro($number, $offset) {
+		return $query = $this->db->get($this->table, $number, $offset)->result();
+	}
+ 
+	function jumlah_datapro() {
+		return $this->db->get($this->table)->num_rows();
+	}
 }
 ?>

@@ -89,31 +89,39 @@ class Dashboard extends CI_Controller {
 
 	public function kegiatanmasuk()
 	{
+		$data['title'] = "Kegiatan Masuk";
 		$data['title_page'] = "KEGIATAN MASUK";
 		$data['users'] = $this->session->userdata('username');
 		$keyword=$this->input->post('search');
 		if (!empty($keyword)) {
-			$data['title'] = "Kegiatan Masuk";
 			$data['data_proposal']=$this->M_Proposal->search($keyword);
 			$this->templateadmin->disp_kegiatan_masuk('dashboard/kegiatanmasuk', $data);
 		}else {
-			$data['title'] = "Kegiatan Masuk";
 			$data["data_proposal"] = $this->M_Proposal->getAll();
+
+			// Pagination
+			$jumlah_datapro = $this->M_Proposal->jumlah_datapro();
+			$config['base_url'] = base_url().'admin/kegiatan-masuk';
+			$config['total_rows'] = $jumlah_datapro;
+			$config['per_page'] = 5;
+			$from = $this->uri->segment(3);
+			$this->pagination->initialize($config);		
+			$data["data_proposal"] = $this->M_Proposal->data_pro($config['per_page'],$from);
+
 			$this->templateadmin->disp_kegiatan_masuk('dashboard/kegiatanmasuk', $data);
 		}
 	}
 
 	public function kegiatanditerima()
 	{
+		$data['title'] = "Kegiatan Diterima";
 		$data['title_page'] = "KEGIATAN DITERIMA";
 		$data['users'] = $this->session->userdata('username');
 		$keyword=$this->input->post('search');
 		if (!empty($keyword)) {
-			$data['title'] = "Kegiatan Diterima";
 			$data['data_proposal']=$this->M_Proposal->search($keyword);
 			$this->templateadmin->disp_kegiatan_diterima('dashboard/kegiatanditerima', $data);
 		}else {
-			$data['title'] = "Kegiatan Diterima";
 			$data["data_proposal"] = $this->M_Proposal->getStatus('TERIMA');
 			$this->templateadmin->disp_kegiatan_diterima('dashboard/kegiatanditerima', $data);
 		}

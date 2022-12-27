@@ -33,7 +33,8 @@
                                 </thead>
                                 <tbody>
                                     <?php 
-                                    $no = 1;
+                                    $no = $this->uri->segment('3') + 1;
+                                    // $no = 1;
                                     foreach ($data_proposal as $row) : 
                                     
                                     ?>
@@ -54,6 +55,12 @@
 
                                 </tbody>
                             </table>
+                            <br/>
+                            <div class="justify-content-center">
+                                <?php 
+                                    echo $this->pagination->create_links();
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>
