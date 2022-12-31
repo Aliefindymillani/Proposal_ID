@@ -72,51 +72,55 @@ Maka langkah-langkah yang harus dilalukan :
 
 1. Halaman Login
 
-   > ![image](https://user-images.githubusercontent.com/91102303/209679873-cdf98473-d7ba-4f1f-bd63-855526ac352e.png)
+   > ![image](https://user-images.githubusercontent.com/71686005/210123845-85716257-3b4b-4195-ad13-1ed7cb76523b.png)
+	 
+2. Halaman Sign Up
 
-2. Halaman Dashboard User
+   > ![image](https://user-images.githubusercontent.com/71686005/210123853-28a55d0f-3aec-4866-b1ac-7cefe28ed101.png)
+
+3. Halaman Dashboard User
 
    > ![image](https://user-images.githubusercontent.com/91102303/209679749-61a97518-0cb3-4ffa-a907-d2278a53e4d9.png)
 
-3. Halaman Pengajuan Proposal
+4. Halaman Pengajuan Proposal
 
    > ![image](https://user-images.githubusercontent.com/91102303/209679577-5004aac1-02cf-45bf-8a68-617ecb5a1b49.png)
 
-4. Halaman Status Pengajuan
+5. Halaman Status Pengajuan
 
    > ![image](https://user-images.githubusercontent.com/91102303/209679699-cf86acba-78ff-44f8-9e71-3d474c1cf976.png)
 
-5. Halaman Jadwal Kegiatan
+6. Halaman Jadwal Kegiatan
 
    > ![image](https://user-images.githubusercontent.com/91102303/209679522-fae68872-2e47-4e7f-884d-36118c70af8f.png)
 
-6. Halaman Logout User
+7. Halaman Logout User
 
    > ![image](https://user-images.githubusercontent.com/91102303/209679480-ecb761fa-4b00-4485-9e3d-7f24b17fb599.png)
 
-7. Halaman Dashboard Admin
+8. Halaman Dashboard Admin
 
    > ![image](https://user-images.githubusercontent.com/91102303/209679458-63f78e73-1ed5-470c-8ef7-75c886a88bac.png)
 
-8. Halaman Kegiatan Masuk
+9. Halaman Kegiatan Masuk
 
    > ![image](https://user-images.githubusercontent.com/91102303/209679418-ac0f071b-e86c-4096-94bc-17332a27978e.png)
 
-9. Halaman Kegiatan Diterima
+10. Halaman Kegiatan Diterima
 
    > ![image](https://user-images.githubusercontent.com/91102303/209679391-6b7b639d-0024-4835-b0c8-38da284bf50c.png)
 
-10. Halaman Kegiatan Ditolak
+11. Halaman Kegiatan Ditolak
 
     > ![image](https://user-images.githubusercontent.com/91102303/209679344-282e912e-e529-4348-9e7f-d2fb186a46d0.png)
 
-11. Halaman Tambah User
+12. Halaman Tambah User
 
     > ![image](https://user-images.githubusercontent.com/91102303/209679321-e453f5c9-3c86-4ba0-8b8c-53ca38da38d3.png)
 
-12. Halaman Daftar User
+13. Halaman Daftar User
 
     > ![image](https://user-images.githubusercontent.com/91102303/209679241-7b737c42-21bd-4014-8d1f-d79c849519c8.png)
 
-13. Halaman Logout User
+14. Halaman Logout User
     > ![image](https://user-images.githubusercontent.com/91102303/209679480-ecb761fa-4b00-4485-9e3d-7f24b17fb599.png)
