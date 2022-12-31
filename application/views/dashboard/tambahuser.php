@@ -1,10 +1,6 @@
 <div class="col-xl-12 col-md-6">
     <div class="card">
-        <div class="card-header bg-info">
-
-        </div>
         <div class="card-body">
-            <!-- Nested Row within Card Body -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="p-2">

@@ -1,8 +1,5 @@
 <div class="col-xl-12 col-md-6">
     <div class="card">
-        <div class="card-header bg-info">
-
-        </div>
         <div class="card-body">
             <div class="col justify-content-end d-flex mb-2">
                 <form class="form-inline" role="form" action="<?php echo base_url().'admin/kegiatan-ditolak';?>" method="post">

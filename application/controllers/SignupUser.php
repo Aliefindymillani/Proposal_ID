@@ -16,6 +16,15 @@ class SignupUser extends CI_Controller {
         $data['title'] = "Sign Up";
         $data['title_page'] = "SIGN UP";
         $this->templateuser->disp_signup_user('user/signup', $data);
+
+		if($this->session->userdata('is_login') == true) {
+			if ($this->session->userdata('akses')=='admin') {
+				redirect('admin/home');
+			}
+			elseif ($this->session->userdata('akses')=='user') {
+				redirect('home');
+			}
+	  	}
 	}
 
     function process()
