@@ -5,7 +5,6 @@
         </div>
 
         <div class="card-body">
-            <!-- (A) SEARCH FORM -->
             <div class="col justify-content-end d-flex mb-2">
                 <form class="form-inline" role="form" action="<?php echo base_url().'admin/kegiatan-masuk';?>" method="post">
                     <div class="form-group" style="padding-right:10px;">
